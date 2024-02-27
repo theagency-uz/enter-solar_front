@@ -10,12 +10,43 @@ function NavList({ lng, setOpen, ...props }) {
     <ul className={classes.navList}>
       <li className={classes.navItem}>
         <Link
-          href={"#"}
+          href={"#catalog"}
           onClick={(e) => {
             setOpen(false);
           }}
         >
-          {t("")}
+          {t("Каталог")}
+        </Link>
+      </li>
+
+      <li className={classes.navItem}>
+        <Link
+          href={"/business"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Для бизнеса")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"/articles"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Статьи")}
+        </Link>
+      </li>
+      <li className={classes.navItem}>
+        <Link
+          href={"#contacts"}
+          onClick={(e) => {
+            setOpen(false);
+          }}
+        >
+          {t("Контакты")}
         </Link>
       </li>
     </ul>

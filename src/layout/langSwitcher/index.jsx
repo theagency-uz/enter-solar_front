@@ -27,7 +27,6 @@ export default function LangSwitcher({ lng, ...props }) {
       >
         Ru
       </Link>
-      <span>|</span>
       <Link
         href={redirectedPathName("uz")}
         className={`${classes.sidebarBtn} ${
@@ -35,6 +34,14 @@ export default function LangSwitcher({ lng, ...props }) {
         }`}
       >
         Uz
+      </Link>
+      <Link
+        href={redirectedPathName("en")}
+        className={`${classes.sidebarBtn} ${
+          lng === "en" ? classes.active : ""
+        }`}
+      >
+        En
       </Link>
     </Box>
   );

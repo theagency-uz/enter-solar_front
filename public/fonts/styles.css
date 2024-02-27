@@ -1,13 +1,57 @@
-/*============================================= Bebas Neue ===================================================*/
+/*============================================= Stapel ===================================================*/
+@font-face {
+  font-family: "Stapel";
+  src: url("/fonts/Stapel/StapelText-Light.woff2") format("woff2"),
+    url("/fonts/Stapel/StapelText-Light.woff") format("woff"),
+    url("/fonts/Stapel/StapelText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-  font-family: "Bebas Neue Cyrillic";
-  src: url("/fonts/Bebas-Neue-Cyrillic/BebasNeueCyrillic.woff2") format("woff2"),
-    url("/fonts/Bebas-Neue-Cyrillic/BebasNeueCyrillic.woff") format("woff"),
-    url("/fonts/Bebas-Neue-Cyrillic/BebasNeueCyrillic.ttf") format("truetype");
+  font-family: "Stapel";
+  src: url("/fonts/Stapel/StapelText-Regular.woff2") format("woff2"),
+    url("/fonts/Stapel/StapelText-Regular.woff") format("woff"),
+    url("/fonts/Stapel/StapelText-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/*============================================= Bebas Neue ===================================================*/
+@font-face {
+  font-family: "Stapel";
+  src: url("/fonts/Stapel/StapelText-Medium.woff2") format("woff2"),
+    url("/fonts/Stapel/StapelText-Medium.woff") format("woff"),
+    url("/fonts/Stapel/StapelText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*============================================= Stapel ===================================================*/
+
+/*============================================= Benzin ===================================================*/
+
+@font-face {
+  font-family: "Benzin";
+  src: url("/fonts/Benzin/Benzin-Regular.woff2") format("woff2"),
+    url("/fonts/Benzin/Benzin-Regular.woff") format("woff"),
+    url("/fonts/Benzin/Benzin-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Benzin";
+  src: url("/fonts/Benzin/Benzin-Medium.woff2") format("woff2"),
+    url("/fonts/Benzin/Benzin-Medium.woff") format("woff"),
+    url("/fonts/Benzin/Benzin-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*============================================= Benzin ===================================================*/

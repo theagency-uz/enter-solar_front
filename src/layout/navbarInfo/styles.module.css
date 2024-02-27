@@ -1,0 +1,54 @@
+.navbarInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.navbaTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.navbarTitle {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: var(--font60);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 91%;
+  white-space: pre-line;
+}
+
+.navbarText {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114.286%;
+}
+
+button.navbarFormBtn {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 185.714%;
+  border-radius: 100px;
+  background: #ff8115;
+  width: 170px;
+  height: 40px;
+  border: none;
+}
+
+button.navbarFormBtn:hover {
+  background: #ff8115;
+}
+
+@media (min-width: 992px) {
+  .navbarText {
+    max-width: 23vw;
+  }
+}

@@ -7,34 +7,34 @@ import classes from "./styles.module.css";
 
 function SocialMedia({ ...props }) {
   return (
-    <Box className={classes.social}>
-      <Link href="https://www.facebook.com/uzerkmakon" target="_blank" passHref aria-label="facebook">
-        <Image
-          src={"/icons/facebook.svg"}
-          width={25}
-          height={25}
-          alt={"facebook-icon"}
-          className={classes.socialIcon}
-        />
-      </Link>
-      <Link href="https://t.me/aj_distribution" target="_blank" passHref aria-label="telegram">
-        <Image
-          src={"/icons/telegram.svg"}
-          width={25}
-          height={25}
-          alt={"telegram-icon"}
-          className={classes.socialIcon}
-        />
-      </Link>
-      <Link href="https://www.instagram.com/byerkmakon/" target="_blank" passHref aria-label="instagram">
+    <Box className={classes.socialLinkBox}>
+      <a href={"/"} className={classes.socialLink} target="_blank">
         <Image
           src={"/icons/instagram.svg"}
-          width={25}
-          height={25}
-          alt={"instagram-icon"}
+          width={17}
+          height={17}
+          alt={"social-icon"}
           className={classes.socialIcon}
         />
-      </Link>
+      </a>
+      <a href={"/"} className={classes.socialLink} target="_blank">
+        <Image
+          src={"/icons/telegram.svg"}
+          width={17}
+          height={17}
+          alt={"social-icon"}
+          className={classes.socialIcon}
+        />
+      </a>
+      <a href={"/"} className={classes.socialLink} target="_blank">
+        <Image
+          src={"/icons/facebook.svg"}
+          width={17}
+          height={17}
+          alt={"social-icon"}
+          className={classes.socialIcon}
+        />
+      </a>
     </Box>
   );
 }
