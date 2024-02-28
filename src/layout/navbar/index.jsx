@@ -7,11 +7,11 @@ import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
 import { useContext, useRef, useState } from "react";
 import SidebarContext from "@/context/sidebar.context";
-import LangSwitcher from "./langSwitcher";
+import LangSwitcher from "../langSwitcher";
 import SocialMedia from "@/Components/common/socialMedia";
-import NavList from "./navList";
-import MenuIcon from "./menuIcon";
-import NavbarInfo from "./navbarInfo";
+import NavList from "../navList";
+import MenuIcon from "../menuIcon";
+import NavbarInfo from "../navbarInfo";
 
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));

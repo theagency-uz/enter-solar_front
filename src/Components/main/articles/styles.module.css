@@ -1,0 +1,147 @@
+.articles {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.articlesWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.articlesLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.articlesLink span {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.articlesIcon {
+  width: 8px;
+  height: 8px;
+  object-fit: cover;
+}
+
+.articlesList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.articlesItemLink {
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+.articlesBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.articlesImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.articlesTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%;
+}
+.articleBtnBox {
+  display: flex;
+  justify-content: center;
+}
+
+button.articleBtn {
+  display: flex;
+  justify-content: center;
+  padding: 11px 31px;
+  color: #3e3e3e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  border-radius: 100px;
+  border: 1px solid #c4c4c4;
+  width: 140px;
+}
+
+button.articleBtn:hover {
+  background: transparent;
+}
+
+@media (min-width: 576px) {
+  .articlesList {
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .articlesList {
+    margin-bottom: 0;
+  }
+  .articlesLink {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .articles {
+    padding: 0 40px;
+    margin-bottom: 120px;
+  }
+
+  .articlesItemLink {
+    border-right: none;
+  }
+
+  .articlesLink span {
+    font-size: var(--font14);
+  }
+
+  .articlesItemLink:last-child {
+    border-right: 1px solid #ccc;
+  }
+
+  .articlesItemLink {
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .articlesTitle {
+    font-size: var(--font14);
+    max-width: 17vw;
+  }
+  button.articleBtn {
+    padding: 13px 38px;
+    width: 160px;
+  }
+
+  .articleBtnBox {
+    justify-content: flex-end;
+  }
+}

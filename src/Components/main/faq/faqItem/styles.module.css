@@ -1,0 +1,35 @@
+.title {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 128.571%;
+  font-family: "Stapel";
+  color: #8e8e8e;
+  font-style: normal;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .text {
+    max-width: 46.25vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: var(--font18);
+  }
+
+  .text {
+    font-size: var(--font14);
+  }
+}
