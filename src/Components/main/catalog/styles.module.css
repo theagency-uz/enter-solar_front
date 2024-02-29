@@ -1,0 +1,139 @@
+.catalog {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.catalogTitle {
+  color: #8d8d8d;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130.612%;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.catalogList {
+  display: grid;
+  gap: 20px;
+}
+
+.catalogLink {
+  border: 1px solid #ccc;
+  padding: 20px 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.catalogWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalogInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.catalogDesc {
+  color: #2e2e2e;
+  font-family: "Stapel";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.catalogText {
+  color: #2e2e2e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.catalogType {
+  color: #3e3e3e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.42px;
+  border-radius: 100px;
+  width: 65px;
+  text-align: center;
+  border: 1px solid #c4c4c4;
+}
+
+.catalogImgBox {
+  display: flex;
+}
+
+.catalogImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .catalog {
+    padding: 0 40px;
+    margin-bottom: 120px;
+  }
+
+  .catalogList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .catalogLink:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+  }
+  .catalogLink:nth-child(2) {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+
+  }
+  .catalogLink:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .catalogLink {
+    padding: 0;
+    gap: 0;
+    flex-direction: row;
+  }
+
+  .catalogWrapper {
+    padding: 20px;
+    padding-right: 0;
+  }
+  .catalogDesc {
+    font-size: var(--font24);
+    max-width: 21.5vw;
+  }
+
+  .catalogText {
+    font-size: var(--font14);
+    max-width: 25vw;
+  }
+
+  .catalogType {
+    font-size: var(--font14);
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalogTitle {
+    font-size: var(--font14);
+  }
+}

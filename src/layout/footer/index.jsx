@@ -106,7 +106,7 @@ function Footer({ lng, ...props }) {
       <Box className={classes.footerConnect}>
         <Link href={"/"} className={classes.footerAddress} target="_blank">
           {t(
-            "Ташкентская область, Янгиюльский район г. Ханкурган, махалля Кош-Тепа, Улица Тимура, дом 14"
+            "Ташкентская область, г. Ханкурган, Улица Тимура, дом 14"
           )}
         </Link>
         <Link

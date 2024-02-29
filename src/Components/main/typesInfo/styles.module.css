@@ -1,0 +1,133 @@
+.typesInfo {
+  padding: 50px 10px;
+  margin-bottom: 50px;
+  background: url("/static/site/typeinfo-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.typesInfoTitle {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 30px;
+}
+
+.typesInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.typesInfoInner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.typesInfoName {
+  color: #ececec;
+  font-family: "Stapel";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.typesInfoLine {
+  width: 220px;
+  height: 1px;
+  background: #ececec;
+  display: block;
+}
+
+.typesInfoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.typesInfoType {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.typesInfoAbout {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+.typesInfoBtnBox {
+  display: flex;
+  justify-content: center;
+}
+
+button.typesInfoBtn {
+  border-radius: 100px;
+  border: 1px solid #d9d9d9;
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 216.667%;
+  padding: 6px 22px;
+  background: transparent;
+}
+
+button.typesInfoBtn:hover {
+  background: transparent;
+}
+
+@media (min-width: 992px) {
+  .typesInfo {
+    padding: 100px 40px;
+    margin-bottom: 120px;
+    aspect-ratio: 3 / 2;
+  }
+
+  .typesInfoTitle {
+    margin-bottom: 0;
+    font-size: var(--font60);
+    max-width: 54vw;
+  }
+
+  .typesInfoWrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 100px;
+  }
+  .typesInfoName {
+    font-size: var(--font24);
+  }
+
+  .typesInfoType {
+    font-size: var(--font14);
+  }
+
+  .typesInfoAbout {
+    font-size: var(--font14);
+    max-width: 17vw;
+  }
+  .typesInfoBtnBox {
+    justify-content: flex-end;
+  }
+  button.typesInfoBtn {
+    font-size: var(--font14);
+  }
+}

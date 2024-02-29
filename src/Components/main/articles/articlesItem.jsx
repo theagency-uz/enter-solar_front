@@ -10,14 +10,17 @@ function ArticlesItem({ lng, article, ...props }) {
   return (
     <Link href={`/articles/${article.id}`} className={classes.articlesItemLink}>
       <Box className={classes.articlesBox}>
-        <Image
-          src={article.image}
-          width={333}
-          height={250}
-          alt={"article-img"}
-          priority
-          className={classes.articlesImg}
-        />
+        <Box>
+          <span className={classes.articlesDate}>{article.date}</span>
+          <Image
+            src={article.image}
+            width={333}
+            height={250}
+            alt={"article-img"}
+            priority
+            className={classes.articlesImg}
+          />
+        </Box>
         <h3 className={classes.articlesTitle}>{t(article.title)}</h3>
       </Box>
       <Box className={classes.articleBtnBox}>

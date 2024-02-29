@@ -1,0 +1,97 @@
+.advantages {
+  background: #2a2a2a;
+  padding: 50px 10px;
+  margin-bottom: 50px;
+}
+
+.advantagesTitle {
+  color: #8d8d8d;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130.612%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.advantagesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantagesItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #6a6a6a;
+  padding: 20px 0;
+}
+
+.advantagesItem:first-child {
+  border-top: 1px solid #6a6a6a;
+}
+
+.advantagesImgBox {
+  display: flex;
+}
+
+.advantagesImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.advantagesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.advantagesDesc {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.advantagesText {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+@media (min-width: 992px) {
+  .advantages {
+    padding: 120px 40px;
+    margin-bottom: 120px;
+  }
+
+  .advantagesTitle {
+    font-size: var(--font14);
+  }
+
+  .advantagesItem {
+    flex-direction: row;
+    gap: 0px;
+    padding: 20px 30px 20px 0;
+  }
+  .advantagesImgBox {
+    width: 50%;
+  }
+
+  .advantagesDesc {
+    font-size: var(--font14);
+  }
+  
+  .advantagesText {
+    font-size: var(--font14);
+    max-width: 22vw;
+  }
+}

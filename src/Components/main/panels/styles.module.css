@@ -1,0 +1,123 @@
+.panel {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.panel h3 {
+  margin-bottom: 20px;
+}
+
+.panelList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panelItem {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.panelWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.panelInner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panelTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: -0.114px;
+  white-space: pre-line;
+}
+
+.panelDesc {
+  color: #7c7c7c;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.panelText {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+.panelImgBox {
+  display: flex;
+}
+
+.panelImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .panel {
+    padding: 0 40px;
+    margin-bottom: 120px;
+  }
+  .panel h3 {
+    margin-bottom: 30px;
+    max-width: 31vw;
+  }
+  .panelList {
+    gap: 0px;
+  }
+  .panelItem {
+    flex-direction: row;
+    gap: 0px;
+    padding: 0;
+  }
+  .panelWrapper {
+    gap: 0px;
+    border-right: 1px solid #ccc;
+    padding: 40px 20px;
+    width: 50%;
+  }
+  .panelInner {
+    gap: 15px;
+  }
+
+  .panelTitle {
+    font-size: var(--font24);
+  }
+
+  .panelDesc {
+    white-space: pre-line;
+    font-size: var(--font14);
+  }
+
+  .panelText {
+    font-size: var(--font14);
+    max-width: 24.5vw;
+  }
+
+  .panelImgBox {
+    display: flex;
+    padding: 20px;
+    width: 50%;
+  }
+}

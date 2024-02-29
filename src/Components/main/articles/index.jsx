@@ -6,7 +6,7 @@ import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTranslation } from "@/app/i18n/client";
 import classes from "./styles.module.css";
 import Title from "@/Components/common/title";
-import articlesData from "@/data/articles";
+import articlesData from "@/data/articlesData";
 import ArticlesItem from "./articlesItem";
 
 function Articles({ lng, ...props }) {
