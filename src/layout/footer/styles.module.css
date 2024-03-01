@@ -1,5 +1,5 @@
 .footer {
-  padding: 35px 20px 35px 40px;
+  padding: 50px 10px;
   background: url("/static/site/footer-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,7 +13,8 @@
 
 .footerListBox {
   display: flex;
-  gap: 30px;
+  gap: 55px;
+  margin-bottom: 40px;
 }
 
 .footerListInner {
@@ -50,8 +51,19 @@
 
 .footerSocial {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.footerSocial > div {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.footerSocial > div > a > img {
+  width: 30px;
+  height: 30px;
 }
 
 .footerSocialList {
@@ -68,24 +80,25 @@
 }
 
 .footerLogoImg {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .footerConnect {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .footerAddress {
   color: #fff;
   font-family: "Stapel";
-  font-size: var(--font14);
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  max-width: 18vw;
+  max-width: 260px;
 }
 
 .footerNumber {
@@ -100,6 +113,8 @@
 .footerBottom {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 30px;
   justify-content: space-between;
 }
 
@@ -110,4 +125,114 @@
   font-style: normal;
   font-weight: 400;
   line-height: 78.571%;
+}
+
+.footerConnectBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 992px) {
+  .footer {
+    padding: 35px 20px 35px 40px;
+  }
+
+  .footerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footerListBox {
+    gap: 30px;
+    margin-bottom: 0;
+  }
+
+  .footerListInner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footerListTitle {
+    color: #7ba0b1;
+    font-family: "Stapel";
+    font-size: var(--font14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 92.857%;
+    text-transform: uppercase;
+  }
+
+  .footerList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footerLink {
+    color: #eaeaea;
+    font-family: "Stapel";
+    font-size: var(--font14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 92.857%;
+    text-transform: uppercase;
+  }
+
+  .footerSocial {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 0;
+  }
+  .footerSocial > div {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  
+  .footerLogo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  .footerLogoImg {
+    object-fit: cover;
+  }
+
+  .footerConnect {
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+
+  .footerAddress {
+    font-size: var(--font14);
+    max-width: 18vw;
+  }
+
+  .footerNumber {
+    color: #fff;
+    font-family: "Stapel";
+    font-size: var(--font20);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 111.746%;
+  }
+
+  .footerBottom {
+    flex-direction: row;
+  }
+
+  .footerMade {
+    color: #bebebe;
+    font-family: "Stapel";
+    font-size: var(--font14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 78.571%;
+  }
 }

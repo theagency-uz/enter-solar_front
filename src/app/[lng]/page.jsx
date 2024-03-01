@@ -4,6 +4,7 @@ import Business from "@/Components/main/business";
 import Catalog from "@/Components/main/catalog";
 import Contact from "@/Components/main/contact";
 import Faq from "@/Components/main/faq";
+import FormContent from "@/Components/main/formContent";
 import Info from "@/Components/main/info";
 import Panels from "@/Components/main/panels";
 import TypesInfo from "@/Components/main/typesInfo";
@@ -20,6 +21,7 @@ export default function Home({ params: { lng }, ...props }) {
       <Contact lng={lng} />
       <Business lng={lng} />
       <Articles lng={lng} />
+      <FormContent lng={lng} />
     </main>
   );
 }

@@ -1,0 +1,114 @@
+.formContent {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.formContentWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px 10px 30px;
+  border: 1px solid #ccc;
+}
+
+.formContentImgBox {
+  display: flex;
+}
+
+.formContentImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.formContentInner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formContentInner button {
+  margin: auto;
+}
+
+.formContentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formContentTitle {
+  color: #303030;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.formContentInner .MuiAccordionSummary-expandIconWrapper > svg {
+  color: #ff8115;
+}
+
+.formContentInner div:global(.MuiAccordion-root::before) {
+  background-color: transparent;
+}
+
+.formContentTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: var(--font30);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.formContentText {
+  color: #777;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 121.429%;
+}
+
+@media (min-width: 992px) {
+  .formContent {
+    padding: 0px 40px;
+    margin-bottom: 120px;
+  }
+  .formContentWrapper {
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px 30px;
+  }
+
+  .formContentInner {
+    gap: 25px;
+    width: 50%;
+  }
+  .formContentImgBox {
+    width: 50%;
+  }
+
+  .formContentTitle {
+    font-size: var(--font40);
+  }
+
+  .formContentInner .MuiAccordionSummary-expandIconWrapper > svg {
+    color: #ff8115;
+  }
+
+  .formContentInner div:global(.MuiAccordion-root::before) {
+    background-color: transparent;
+  }
+
+  .formContentText {
+    font-size: var(--font14);
+    max-width: 24vw;
+  }
+  .formContentInner button {
+    margin: 0;
+  }
+}

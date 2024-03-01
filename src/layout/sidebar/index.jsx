@@ -16,8 +16,8 @@ function Sidebar({
       open={open}
       PaperProps={{
         sx: {
-          background: "#000",
-          color: "#FFFFFF",
+          background: "#fff",
+          color: "#000",
           // maxWidth: "400px",
           width: "100%",
           maxWidth: maxWidth,

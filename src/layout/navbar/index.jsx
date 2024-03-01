@@ -47,7 +47,7 @@ function Navbar({ lng, ...props }) {
               />
             </Link>
 
-            <NavList lng={lng} setOpen={setOpen} />
+            {mdUp && <NavList lng={lng} setOpen={setOpen} />}
 
             {!mdUp && <MenuIcon />}
           </Box>

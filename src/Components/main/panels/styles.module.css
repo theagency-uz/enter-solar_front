@@ -23,6 +23,9 @@
   padding-bottom: 20px;
 }
 
+.panelItem:first-child {
+  border-top: 1px solid #ccc;
+}
 .panelWrapper {
   display: flex;
   flex-direction: column;
@@ -90,6 +93,8 @@
     flex-direction: row;
     gap: 0px;
     padding: 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
   }
   .panelWrapper {
     gap: 0px;

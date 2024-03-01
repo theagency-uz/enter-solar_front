@@ -72,8 +72,8 @@ export default function MenuIcon({}) {
       aria-label="menu"
     >
       <svg
-        width="35"
-        height="35"
+        width="40"
+        height="40"
         viewBox="0 0 20 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export default function MenuIcon({}) {
           {...path01Variants.closed}
           animate={path01Controls}
           transition={{ duration: 0.1 }}
-          stroke="#ccc65a"
+          stroke="#414141"
           strokeLinecap="round"
           strokeWidth={1.5}
         />
@@ -90,18 +90,18 @@ export default function MenuIcon({}) {
           {...path02Variants.closed}
           animate={path02Controls}
           transition={{ duration: 0.1 }}
-          stroke="#ccc65a"
+          stroke="#414141"
           strokeLinecap="round"
           strokeWidth={1.5}
         />
-        <motion.path
+        {/* <motion.path
           {...path03Variants.closed}
           animate={path03Controls}
           transition={{ duration: 0.1 }}
           stroke={menuOpen ? "#000" : "#ccc65a"}
           strokeLinecap="round"
           strokeWidth={1.5}
-        />
+        /> */}
       </svg>
     </button>
   );

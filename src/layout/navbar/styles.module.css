@@ -1,5 +1,5 @@
 .navbarTop {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   background: #2a2a2a;
@@ -7,8 +7,8 @@
   padding-right: 50px;
 }
 .navbar {
-  padding: 20px 50px 50px 32px;
-  background: url('/static/site/bg.png');
+  padding: 10px 10px 40px;
+  background: url("/static/site/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -22,12 +22,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 15;
 }
 
 .navbarWrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
+  width: 100%;
 }
 
 .navbarImage {
@@ -41,7 +45,7 @@
 }
 
 .navbarBox {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 30px;
 }
@@ -73,9 +77,19 @@ button.navbarBtn:hover {
   background: transparent;
 }
 
-
 @media (min-width: 992px) {
+  .navbarTop {
+    display: flex;
+  }
   .navbar {
+    padding: 20px 50px 50px 32px;
     margin-bottom: 104px;
+  }
+  .navbarBox {
+    display: flex;
+  }
+  .navbarWrapper {
+    justify-content: flex-start;
+    width: auto;
   }
 }
