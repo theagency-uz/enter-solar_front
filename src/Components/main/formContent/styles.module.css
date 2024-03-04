@@ -47,13 +47,6 @@
   line-height: normal;
 }
 
-.formContentInner .MuiAccordionSummary-expandIconWrapper > svg {
-  color: #ff8115;
-}
-
-.formContentInner div:global(.MuiAccordion-root::before) {
-  background-color: transparent;
-}
 
 .formContentTitle {
   color: #333;
@@ -94,14 +87,6 @@
 
   .formContentTitle {
     font-size: var(--font40);
-  }
-
-  .formContentInner .MuiAccordionSummary-expandIconWrapper > svg {
-    color: #ff8115;
-  }
-
-  .formContentInner div:global(.MuiAccordion-root::before) {
-    background-color: transparent;
   }
 
   .formContentText {

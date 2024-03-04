@@ -13,9 +13,9 @@
 .navbarTitle {
   color: #fff;
   font-family: "Stapel";
-  font-size: var(--font60);
+  font-size: 30px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 91%;
   white-space: pre-line;
 }
@@ -50,5 +50,9 @@ button.navbarFormBtn:hover {
 @media (min-width: 992px) {
   .navbarText {
     max-width: 23vw;
+  }
+
+  .navbarTitle {
+    font-size: var(--font60);
   }
 }

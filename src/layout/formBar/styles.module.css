@@ -1,0 +1,35 @@
+.wrapper {
+  padding: 120px 10px 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wrapper > div {
+  width: 100%;
+}
+
+.wrapper > div > form > div {
+  width: 100% !important;
+}
+
+.wrapper > div > form > button {
+  margin: auto;
+}
+
+.wrapper > form > div::before {
+  background-color: transparent;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 120px 40px 0;
+  }
+}

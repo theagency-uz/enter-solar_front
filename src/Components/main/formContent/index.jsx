@@ -5,6 +5,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import classes from "./styles.module.css";
+import FormWrapper from "@/Components/common/formWrapper";
 
 function FormContent({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -12,17 +13,8 @@ function FormContent({ lng, ...props }) {
   return (
     <Box className={classes.formContent}>
       <Box className={classes.formContentWrapper}>
-        <Box className={classes.formContentInner}>
-          <Box className={classes.formContentBox}>
-            <h4 className={classes.formContentTitle}>{t("Оставьте заявку")}</h4>
-            <p className={classes.formContentText}>
-              {t(
-                "Оставьте ваши контактные данные и мы свяжемся с вами по любым интересующим вопросам."
-              )}
-            </p>
-          </Box>
-          <Form lng={lng} />
-        </Box>
+        <FormWrapper lng={lng} />
+
         <Box className={classes.formContentImgBox}>
           <Image
             src={"/static/site/form.png"}

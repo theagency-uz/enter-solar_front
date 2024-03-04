@@ -1,0 +1,42 @@
+.sidebar {
+  padding-top: 120px;
+}
+
+.sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.sidebarWrapper div > a > img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.sidebarWrapper div > .active {
+  color: #000 !important;
+}
+
+.sidebarBtnBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+button.sidebarBtn {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: var(--font14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 185.714%;
+  padding: 6px 20px;
+  border-radius: 100px;
+  background: #FF8115;
+  border: 1px solid #FF8115;
+  min-width: auto;
+}
+button.sidebarBtn:hover {
+  background: #FF8115;
+}

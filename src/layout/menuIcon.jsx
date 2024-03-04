@@ -1,4 +1,5 @@
 "use client";
+import FormContext from "@/context/form.context";
 import SidebarContext from "@/context/sidebar.context";
 import { motion, useAnimation } from "framer-motion";
 import { useContext, useEffect, useState } from "react";
@@ -23,7 +24,7 @@ const path03Variants = {
 
 export default function MenuIcon({}) {
   const { open, setOpen } = useContext(SidebarContext);
-
+  const { form, setForm } = useContext(FormContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const path01Controls = useAnimation();
   const path02Controls = useAnimation();
@@ -32,20 +33,21 @@ export default function MenuIcon({}) {
     async function handleOpen() {
       if (!menuOpen) {
         setOpen(false);
+        setForm({ open: false });
         path01Controls.start(path01Variants.closed);
         path02Controls.start(path02Variants.closed);
-        await path03Controls.start(path03Variants.moving);
-        await path03Controls.start(path03Variants.closed);
+        // await path03Controls.start(path03Variants.moving);
+        // await path03Controls.start(path03Variants.closed);
       } else {
-        await path03Controls.start(path03Variants.moving);
-        await path03Controls.start(path03Variants.open);
+        // await path03Controls.start(path03Variants.moving);
+        // await path03Controls.start(path03Variants.open);
         path01Controls.start(path01Variants.open);
         path02Controls.start(path02Variants.open);
       }
     }
     handleOpen();
     return () => {};
-  }, [menuOpen, path01Controls, path02Controls, path03Controls]);
+  }, [menuOpen, path01Controls, path02Controls]);
 
   useEffect(() => {
     if (open) {
@@ -84,7 +86,7 @@ export default function MenuIcon({}) {
           transition={{ duration: 0.1 }}
           stroke="#414141"
           strokeLinecap="round"
-          strokeWidth={1.5}
+          strokeWidth={1}
         />
         <motion.path
           {...path02Variants.closed}
@@ -92,7 +94,7 @@ export default function MenuIcon({}) {
           transition={{ duration: 0.1 }}
           stroke="#414141"
           strokeLinecap="round"
-          strokeWidth={1.5}
+          strokeWidth={1}
         />
         {/* <motion.path
           {...path03Variants.closed}

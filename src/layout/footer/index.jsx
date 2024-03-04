@@ -110,7 +110,7 @@ function Footer({ lng, ...props }) {
             {t("Ташкентская область, г. Ханкурган, Улица Тимура, дом 14")}
           </Link>
           <Link
-            href={"tel +998 94 998 94 94"}
+            href={"tel: +998 94 998 94 94"}
             className={classes.footerNumber}
             target="_blank"
           >
@@ -195,7 +195,7 @@ function Footer({ lng, ...props }) {
       <Box className={classes.footerConnect}>
         <Box className={classes.footerConnectBox}>
           <Link
-            href={"tel +998 94 998 94 94"}
+            href={"tel: +998 94 998 94 94"}
             className={classes.footerNumber}
             target="_blank"
           >

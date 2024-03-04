@@ -1,0 +1,12 @@
+.sidebar :global(.MuiDrawer-paper) {
+  background: #fff;
+  color: #333;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .sidebar :global(.MuiDrawer-paper) {
+    max-width: 600px;
+  }
+}

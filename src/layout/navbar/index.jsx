@@ -7,8 +7,9 @@ import classes from "./styles.module.css";
 import { useTranslation } from "@/app/i18n/client";
 import { useContext, useRef, useState } from "react";
 import SidebarContext from "@/context/sidebar.context";
-import LangSwitcher from "../langSwitcher";
 import SocialMedia from "@/Components/common/socialMedia";
+import FormContext from "@/context/form.context";
+import LangSwitcher from "../langSwitcher";
 import NavList from "../navList";
 import MenuIcon from "../menuIcon";
 import NavbarInfo from "../navbarInfo";
@@ -16,6 +17,7 @@ import NavbarInfo from "../navbarInfo";
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  const { form, setForm } = useContext(FormContext);
   const { open, setOpen } = useContext(SidebarContext);
   const { t, i18n } = useTranslation(lng);
 
@@ -34,7 +36,10 @@ function Navbar({ lng, ...props }) {
       </Box>
 
       <Box className={classes.navbar}>
-        <Box className={classes.navbarInner}>
+        <Box
+          className={classes.navbarInner}
+          sx={{ zIndex: form ? (mdUp ? 14 : 18) : 18 }}
+        >
           <Box className={classes.navbarWrapper}>
             <Link href={"/"} className={classes.navbarImage}>
               <Image
@@ -54,14 +59,14 @@ function Navbar({ lng, ...props }) {
 
           <Box className={classes.navbarBox}>
             <Link
-              href={"tel +998 78 122-30-69"}
+              href={"tel: +998 78 122-30-69"}
               className={classes.navbarNumber}
             >
               998 78 122-30-69
             </Link>
             <Button
               className={classes.navbarBtn}
-              // onClick={() => setForm({ open: true })}
+              onClick={() => setForm({ open: true })}
               disableRipple={true}
             >
               {t("Получить консультацию")}

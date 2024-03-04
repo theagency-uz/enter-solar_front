@@ -19,7 +19,7 @@ export default function CustomCheckbox({ label, value, onChange }) {
               width={12}
               height={12}
               alt={"icon"}
-              className={classes.sliderIcon}
+              className={classes.checkboxIcon}
             />
           }
           checkedIcon={
@@ -28,7 +28,7 @@ export default function CustomCheckbox({ label, value, onChange }) {
               width={12}
               height={12}
               alt={"icon"}
-              className={classes.sliderIcon}
+              className={classes.checkboxIcon}
             />
           }
         />

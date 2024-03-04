@@ -1,0 +1,164 @@
+.contactsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.contactsTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.contactsInner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactsDesc {
+  color: #3e3e3e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.contactsLink {
+  color: #a0a0a0;
+  font-family: "Stapel";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%;
+}
+
+.contactsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formContentWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px 10px 30px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+
+.formContentImgBox {
+  display: flex;
+}
+
+.formContentImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.formContentInner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formContentInner button {
+  margin: auto;
+}
+
+.formContentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formContentTitle {
+  color: #303030;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+.formContentTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: var(--font30);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.formContentText {
+  color: #777;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 121.429%;
+}
+
+@media (min-width: 992px) {
+  .contactsBox {
+    flex-direction: row;
+    gap: 0px;
+    margin-bottom: 80px;
+  }
+
+  .contactsTitle {
+    font-size: var(--font40);
+  }
+
+  .contactsInner {
+    gap: 15px;
+  }
+
+  .formContentWrapper {
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px 30px;
+    margin-top: 80px;
+  }
+
+  .formContentInner {
+    gap: 25px;
+    width: 50%;
+  }
+  .formContentImgBox {
+    width: 50%;
+  }
+
+  .formContentTitle {
+    font-size: var(--font40);
+  }
+
+  .formContentText {
+    font-size: var(--font14);
+    max-width: 24vw;
+  }
+  .formContentInner button {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contactsDesc {
+    font-size: var(--font14);
+  }
+
+  .contactsLink {
+    font-size: var(--font20);
+    max-width: 20vw;
+  }
+}

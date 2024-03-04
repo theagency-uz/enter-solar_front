@@ -1,0 +1,25 @@
+.socialLinkBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.socialLink {
+  display: flex;
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+
+@media (min-width: 992px) {
+  .socialLinkBox {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  
+}

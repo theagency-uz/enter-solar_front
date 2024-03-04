@@ -1,0 +1,63 @@
+.formContentInner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formContentInner button {
+  margin: auto;
+}
+
+.formContentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formContentTitle {
+  color: #303030;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+.formContentTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: var(--font30);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.formContentText {
+  color: #777;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 121.429%;
+}
+
+@media (min-width: 992px) {
+
+  .formContentInner {
+    gap: 25px;
+    width: 50%;
+  }
+
+  .formContentTitle {
+    font-size: var(--font40);
+  }
+
+  .formContentText {
+    font-size: var(--font14);
+    max-width: 24vw;
+  }
+  .formContentInner button {
+    margin: 0;
+  }
+}

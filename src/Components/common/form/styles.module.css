@@ -88,6 +88,10 @@
   width: auto;
 }
 
+.number :global(.react-tel-input .form-control::placeholder) {
+  color: #B9B9B9;
+}
+
 .number :global(.react-tel-input .selected-flag) {
   border-radius: 0;
   background: transparent;

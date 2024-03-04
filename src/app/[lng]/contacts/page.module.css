@@ -1,0 +1,24 @@
+.contacts {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.contactsTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .contacts {
+    padding: 0 40px;
+    margin-bottom: 120px;
+  }
+  .contactsTitle {
+    font-size: var(--font40);
+  }
+}

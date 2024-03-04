@@ -13,7 +13,7 @@ export default function PhoneNumber({
   return (
     <>
       <label className={classes.number}>
-        <p className={classes.label}>{label}</p>
+        {/* <p className={classes.label}>{label}</p> */}
         <PhoneInput
           country={"uz"}
           value={phoneNumber}

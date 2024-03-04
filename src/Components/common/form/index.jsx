@@ -1,8 +1,5 @@
 import { useTranslation } from "@/app/i18n/client";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
   Button,
   CircularProgress,
@@ -17,7 +14,6 @@ import * as Yup from "yup";
 import classes from "./styles.module.css";
 // import { sendForm } from "@/services/application";
 import Image from "next/image";
-import AccordionContent from "./AccordionContent";
 import PhoneNumber from "./phoneNumber";
 
 function Form({ lng, ...props }) {

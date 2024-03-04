@@ -41,7 +41,7 @@ function NavList({ lng, setOpen, ...props }) {
       </li>
       <li className={classes.navItem}>
         <Link
-          href={"#contacts"}
+          href={"/contacts"}
           onClick={(e) => {
             setOpen(false);
           }}
