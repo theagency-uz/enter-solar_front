@@ -1,5 +1,4 @@
 "use client";
-import Title from "@/Components/common/title";
 import { useTranslation } from "@/app/i18n/client";
 import { Box, Button } from "@mui/material";
 import React, { useState } from "react";
@@ -10,21 +9,20 @@ import ProductTabs from "@/Components/productTabs";
 import classes from "./styles.module.css";
 import productData from "@/data/productData";
 
-function Product({ params: { lng, id }, ...props }) {
+function Product({ params: { lng, categorySlug, productSlug }, ...props }) {
   const { t } = useTranslation(lng);
   const [product, setProduct] = useState(
-    productData.find((p) => String(p.id) === String(id))
+    productData.find((p) => String(p.id) === String(productSlug))
   );
 
-
   return (
-    <>
+    <Box className={classes.productInfo}>
       <Box className={classes.productInfoWrapper}>
-        <ProductImages productImage={product.productImages} />
-        {/* <ProductInfo lng={lng} product={product} /> */}
+        <ProductImages productImage={product} />
+        <ProductInfo lng={lng} product={product} />
       </Box>
-      {/* <ProductTabs lng={lng} product={product} /> */}
-    </>
+      <ProductTabs lng={lng} product={product} />
+    </Box>
   );
 }
 

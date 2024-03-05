@@ -23,42 +23,42 @@ function ProductAbout({
   return (
     <ul className={classes.productList}>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Серия")}:</span>
-        <span className={classes.productAbout}>{t(series)}</span>
+        <span className={classes.productDesc}>{t("Мощность")}:</span>
+        <span className={classes.productAbout}>{t("440-455 Вт")}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Размеры упаковки")}:</span>
-        <span className={classes.productAbout}>{t(packaging)}</span>
+        <span className={classes.productDesc}>{t("Эффективность")}:</span>
+        <span className={classes.productAbout}>{t("24.6%")}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Вес")}:</span>
-        <span className={classes.productAbout}>{t(weight)}</span>
+        <span className={classes.productDesc}>{t("Гарантия линейной производительности")}:</span>
+        <span className={classes.productAbout}>{t(30)}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Длина")}:</span>
-        <span className={classes.productAbout}>{t(length)}</span>
+        <span className={classes.productDesc}>{t("Гарантия на модуль")}:</span>
+        <span className={classes.productAbout}>{t(15)}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Мощность секции, Вт")}:</span>
-        <span className={classes.productAbout}>{t(sectionPower)}</span>
+        <span className={classes.productDesc}>{t("Рабочая температура")}:</span>
+        <span className={classes.productAbout}>{t("-40 до +85°C ")}</span>
       </li>
       <li className={classes.productItem}>
         <span className={classes.productDesc}>
-          {t("Мощность при монтаже снаружи трубопровода, Вт/м")}:
+          {t("Конфигурация")}:
         </span>
-        <span className={classes.productAbout}>{t(pipelinePower)}</span>
+        <span className={classes.productAbout}>{t("«стекло-стекло»")}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Монтаж")}:</span>
-        <span className={classes.productAbout}>{t(mounting)}</span>
+        <span className={classes.productDesc}>{t("Габариты, мм")}:</span>
+        <span className={classes.productAbout}>{t("1051 х 2134 х 35")}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Тип кабеля")}:</span>
-        <span className={classes.productAbout}>{t(cableType)}</span>
+        <span className={classes.productDesc}>{t("Коэффицент двусторонности")}:</span>
+        <span className={classes.productAbout}>{t("90%")}</span>
       </li>
       <li className={classes.productItem}>
-        <span className={classes.productDesc}>{t("Категория")}:</span>
-        <span className={classes.productAbout}>{t(category)}</span>
+        <span className={classes.productDesc}>{t("Температурный коэффицент")}:</span>
+        <span className={classes.productAbout}>{t("-0.26%/°C")}</span>
       </li>
     </ul>
   );

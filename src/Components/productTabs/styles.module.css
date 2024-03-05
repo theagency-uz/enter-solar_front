@@ -1,10 +1,10 @@
 .editor {
-  color: #333;
+  color: #7a7a7a;
   font-family: "Manrope";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 142.857%;
 }
 
 .editorBox {
@@ -60,8 +60,6 @@
 
 .tabMain {
   width: 100%;
-  padding: 0 10px;
-  margin-bottom: 60px;
 }
 
 .tabContext {
@@ -69,55 +67,50 @@
 }
 
 .tabList :global(.Mui-selected) {
-  color: black!important;
+  color: black !important;
 }
 
 .tabList :global(.MuiTabs-flexContainer) {
   justify-content: space-between;
-  margin-bottom:0; 
+  margin-bottom: 0;
   padding: 0;
 }
 
-.tabLabel {
-  font-family: "Manrope";
-  font-style: "normal";
-  font-weight: 500;
-  font-size: var(--font14);
-  line-height: 130%;
-  color: #BFBFBF;
-  text-transform: none;
+button.tabLabel {
+  color: #c1c1c1;
+  font-family: "Stapel";
+  font-size: var(--font16);
+  font-style: normal;
+  font-weight: 400;
   line-height: 100%;
   padding: 0;
   border: none;
-  min-width: 100%;
-  max-width: 100%;
-  width: 50%;
+  background: transparent;
+  width: 100%;
+  text-transform: initial;
 }
 
 .tabPanel {
   padding: 0;
-  padding-top: 15px;
 }
 
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordionTitle {
+  color: #4e4e4e;
+  font-family: "Stapel";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
 @media (min-width: 992px) {
-  .tabMain {
-    width: 100%;
-    padding: 0 50px;
-    margin-bottom: 80px;
-  }
-
-  .tabList :global(.MuiTabs-flexContainer) {
-    justify-content: space-around;
-    margin-bottom: 15px;
-  }
-
-  .tabPanel {
-    padding: 0 65px;
-    padding-top: 30px;
-  }
-
   .editor {
-    max-width: 52.2vw;
+    max-width: 52vw;
   }
   .editorLink span {
     display: block;

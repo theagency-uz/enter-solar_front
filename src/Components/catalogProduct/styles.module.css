@@ -1,0 +1,73 @@
+.catalogList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.catalogItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  gap: 25px;
+  width: calc(100% / 1 - 20px);
+}
+
+.catalogImgBox {
+  display: flex;
+}
+
+.catalogImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.catalogName {
+  color: #000;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+}
+
+button.catalogItemBtn {
+  color: #3e3e3e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 216.667%;
+  border-radius: 100px;
+  border: 1px solid #d9d9d9;
+  padding: 5px 40px;
+}
+
+button.catalogItemBtn:hover {
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .catalogItem {
+    width: calc(100% / 2 - 15px);
+  }
+}
+@media (min-width: 992px) {
+  .catalogItem {
+    padding: 30px 33px 20px;
+    width: calc(100% / 3 - 40px / 3);
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalogName {
+    font-size: var(--font14);
+  }
+
+  button.catalogItemBtn {
+    font-size: var(--font14);
+    padding: 6px 50px;
+  }
+}

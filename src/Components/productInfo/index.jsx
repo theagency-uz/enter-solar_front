@@ -6,7 +6,6 @@ import classes from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ProductAbout from "./productAbout";
-import ProductAccordion from "./productAccordion";
 import FormContext from "@/context/form.context";
 
 function ProductInfo({ lng, product, ...props }) {
@@ -15,12 +14,12 @@ function ProductInfo({ lng, product, ...props }) {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   return (
-    <Box className={classes.productBox}>
-      <Box key={product.id} className={classes.productWrapper}>
-        <h3 className={classes.productTitle}>{t(product.title)}</h3>
-        {product.footage && (
-          <ProductAccordion footage={product.footage} lng={lng} />
-        )}
+    <Box key={product.id} className={classes.productBox}>
+      <Box className={classes.productWrapper}>
+        <h3 className={classes.productTitle}>
+          {t("Двусторонняя солнечная панель LONGI LR5-72HBD 535M")}
+        </h3>
+
         <ProductAbout
           lng={lng}
           series={product.series}
@@ -33,21 +32,13 @@ function ProductInfo({ lng, product, ...props }) {
           cableType={product.cableType}
           category={product.category}
         />
+
         <Button
           className={classes.productBtn}
           onClick={() => setForm({ open: true })}
           disableRipple={true}
         >
-          {t("оставить заявку")}
-          <Box className={classes.productIconBox}>
-            <Image
-              src={"/icons/arrow-right.svg"}
-              width={18}
-              height={15}
-              alt={"icon"}
-              className={classes.productIcon}
-            />
-          </Box>
+          {t("Оставить заявку")}
         </Button>
       </Box>
     </Box>

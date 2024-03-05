@@ -5,7 +5,8 @@ import { Box, Button, useMediaQuery } from "@mui/material";
 import React, { useState } from "react";
 import productData from "@/data/productData";
 import Image from "next/image";
-import CatalogPage from "@/Components/catalogPage";
+import CatalogProduct from "@/Components/catalogProduct";
+
 import classes from "./styles.module.css";
 
 function PageWrapper({ lng, ...props }) {
@@ -16,12 +17,9 @@ function PageWrapper({ lng, ...props }) {
   return (
     <>
       <Box className={classes.productInfo}>
-        <Box className={classes.productWrapper}>
-          <Title title={"Каталог"} lng={lng} />
-          <span className={classes.border}></span>
-        </Box>
+        <Box className={classes.productWrapper}></Box>
 
-        <CatalogPage lng={lng} product={product} />
+        <CatalogProduct lng={lng} product={product} />
       </Box>
     </>
   );
