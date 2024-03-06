@@ -8,6 +8,7 @@ import Image from "next/image";
 import CatalogProduct from "@/Components/catalogProduct";
 
 import classes from "./styles.module.css";
+import Filter from "@/Components/filter";
 
 function PageWrapper({ lng, ...props }) {
   const { t } = useTranslation(lng);
@@ -15,13 +16,14 @@ function PageWrapper({ lng, ...props }) {
   const [product, setProduct] = useState(productData);
 
   return (
-    <>
-      <Box className={classes.productInfo}>
-        <Box className={classes.productWrapper}></Box>
+    <Box className={classes.catalog}>
+      <h3 className={classes.catalogTitle}>{t("Фото-электрические модули")}</h3>
 
+      <Box className={classes.catalogFilter}>
+        <Filter lng={lng} />
         <CatalogProduct lng={lng} product={product} />
       </Box>
-    </>
+    </Box>
   );
 }
 

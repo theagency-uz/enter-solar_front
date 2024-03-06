@@ -66,11 +66,7 @@ function ProductTabsPanel({ lng, product, ...props }) {
                 __html: product.description,
               }}
               className={classes.editor}
-            >
-              {/* {t(
-                "Мы сформировали команду целеустремлённых людей, отладил систему поставок, создал высокую культуру партнёрских отношений. Мы сконцентрированы на том, чтобы идти у к успеху совместно с нашими партнёрами."
-              )} */}
-            </div>
+            ></div>
           </TabPanel>
 
           <TabPanel value="2" className={classes.tabPanel}>

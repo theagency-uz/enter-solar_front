@@ -7,15 +7,21 @@
   padding-right: 50px;
 }
 .navbar {
-  padding: 10px 10px 40px;
-  background: url("/static/site/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  margin-bottom: 65px;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.navbarScrolled {
+  padding: 10px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navbarInner {
@@ -39,8 +45,8 @@
 }
 
 .navbarLogo {
-  width: 100px;
-  height: 80px;
+  width: 76px;
+  height: 55px;
   object-fit: contain;
 }
 
@@ -81,17 +87,32 @@ button.navbarBtn:hover {
   .navbarInner {
     z-index: 15;
   }
+
+  .navbarLogo {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+  }
 }
 
 @media (min-width: 992px) {
   .navbarTop {
     display: flex;
   }
-  .navbar {
-    padding: 20px 50px 50px 32px;
-    margin-bottom: 104px;
+
+  .navbarTopScrolled {
+    position: absolute;
+    opacity: 0;
   }
-  
+
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .navbarScrolled {
+    padding: 5px 40px;
+  }
+
   .navbarBox {
     display: flex;
   }

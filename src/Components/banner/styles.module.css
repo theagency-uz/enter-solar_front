@@ -1,7 +1,14 @@
 .navbarInfo {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 30px;
+  padding: 10px 10px 40px;
+  background: url("/static/site/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 65px;
 }
 
 .navbaTextBox {
@@ -48,6 +55,10 @@ button.navbarFormBtn:hover {
 }
 
 @media (min-width: 992px) {
+  .navbarInfo {
+    padding: 20px 50px 50px 32px;
+    margin-bottom: 104px;
+  }
   .navbarText {
     max-width: 23vw;
   }

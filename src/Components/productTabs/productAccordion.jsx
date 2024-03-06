@@ -76,15 +76,11 @@ function ProductAccordion({ lng, product, ...props }) {
 
         <AccordionDetails>
           <div
-            // dangerouslySetInnerHTML={{
-            //   __html: product.description,
-            // }}
+            dangerouslySetInnerHTML={{
+              __html: product.description,
+            }}
             className={classes.editor}
-          >
-            {t(
-              "Мы сформировали команду целеустремлённых людей, отладил систему поставок, создал высокую культуру партнёрских отношений. Мы сконцентрированы на том, чтобы идти у к успеху совместно с нашими партнёрами."
-            )}
-          </div>
+          ></div>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -103,15 +99,11 @@ function ProductAccordion({ lng, product, ...props }) {
 
         <AccordionDetails>
           <div
-            // dangerouslySetInnerHTML={{
-            //   __html: product.description,
-            // }}
+            dangerouslySetInnerHTML={{
+              __html: product.description,
+            }}
             className={classes.editor}
-          >
-            {t(
-              "Мы сформировали команду целеустремлённых людей, отладил систему поставок, создал высокую культуру партнёрских отношений. Мы сконцентрированы на том, чтобы идти у к успеху совместно с нашими партнёрами."
-            )}
-          </div>
+          ></div>
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -130,15 +122,11 @@ function ProductAccordion({ lng, product, ...props }) {
 
         <AccordionDetails>
           <div
-            // dangerouslySetInnerHTML={{
-            //   __html: product.description,
-            // }}
+            dangerouslySetInnerHTML={{
+              __html: product.description,
+            }}
             className={classes.editor}
-          >
-            {t(
-              "Мы сформировали команду целеустремлённых людей, отладил систему поставок, создал высокую культуру партнёрских отношений. Мы сконцентрированы на том, чтобы идти у к успеху совместно с нашими партнёрами."
-            )}
-          </div>
+          ></div>
         </AccordionDetails>
       </Accordion>
     </Box>

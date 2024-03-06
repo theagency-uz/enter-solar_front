@@ -1,10 +1,13 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTranslation } from "@/app/i18n/client";
 import classes from "./styles.module.css";
+import FormContext from "@/context/form.context";
 
-function NavbarInfo({ lng, ...props }) {
+function Banner({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
+  const { form, setForm } = useContext(FormContext);
 
   return (
     <Box className={classes.navbarInfo}>
@@ -21,7 +24,7 @@ function NavbarInfo({ lng, ...props }) {
 
       <Button
         className={classes.navbarFormBtn}
-        // onClick={() => setForm({ open: true })}
+        onClick={() => setForm({ open: true })}
         disableRipple={true}
       >
         {t("Оставить заявку")}
@@ -30,4 +33,4 @@ function NavbarInfo({ lng, ...props }) {
   );
 }
 
-export default NavbarInfo;
+export default Banner;

@@ -17,20 +17,20 @@ function ProductInfo({ lng, product, ...props }) {
     <Box key={product.id} className={classes.productBox}>
       <Box className={classes.productWrapper}>
         <h3 className={classes.productTitle}>
-          {t("Двусторонняя солнечная панель LONGI LR5-72HBD 535M")}
+          {t(product.title)}
         </h3>
 
         <ProductAbout
           lng={lng}
-          series={product.series}
-          packaging={product.packaging}
-          weight={product.weight}
-          length={product.length}
-          sectionPower={product.sectionPower}
-          pipelinePower={product.pipelinePower}
-          mounting={product.mounting}
-          cableType={product.cableType}
-          category={product.category}
+          power={product.power}
+          efficiency={product.efficiency}
+          linearGuaranteed={product.linearGuaranteed}
+          moduleGuarantee={product.moduleGuarantee}
+          temperature={product.temperature}
+          configuration={product.configuration}
+          dimensions={product.dimensions}
+          bilaterality={product.bilaterality}
+          tempCoefficient={product.tempCoefficient}
         />
 
         <Button

@@ -1,3 +1,4 @@
+import Banner from "@/Components/banner";
 import Advantages from "@/Components/main/advantages";
 import Articles from "@/Components/main/articles";
 import Business from "@/Components/main/business";
@@ -12,6 +13,7 @@ import TypesInfo from "@/Components/main/typesInfo";
 export default function Home({ params: { lng }, ...props }) {
   return (
     <main>
+      <Banner lng={lng} />
       <Info lng={lng} />
       <Catalog lng={lng} />
       <TypesInfo lng={lng} />

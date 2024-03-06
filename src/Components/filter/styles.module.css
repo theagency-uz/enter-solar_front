@@ -1,0 +1,106 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.filterTitle {
+  color: #000;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.filterIcon {
+  object-fit: cover;
+}
+
+.filterBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filterName {
+  color: #000;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.filterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.filterModal {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 100px 10px 0;
+}
+
+.filterWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+button.filterModalBtn {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 216.667%;
+  border-radius: 100px;
+  background: #ff8115;
+  padding: 6px 0;
+  width: 150px;
+  margin: auto;
+}
+
+button.filterTitleBtn {
+  color: #000;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  max-width: fit-content;
+}
+
+button.filterTitleBtn:hover {
+  background: transparent;
+}
+
+@media (min-width: 992px) {
+  .filter {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filterTitle {
+    font-size: var(--font14);
+  }
+  .filterName {
+    font-size: var(--font14);
+  }
+}

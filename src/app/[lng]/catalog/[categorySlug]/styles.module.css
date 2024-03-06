@@ -1,0 +1,46 @@
+.catalog {
+  padding: 0 10px;
+  padding-top: 100px;
+  margin-bottom: 80px;
+}
+
+.catalogTitle {
+  color: #333;
+  font-family: "Stapel";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.catalogFilter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .catalog {
+    padding: 0 40px;
+    padding-top: 170px;
+    margin-bottom: 120px;
+  }
+  .catalogTitle {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .catalogFilter {
+    flex-direction: row;
+    gap: 40px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .catalogTitle {
+    font-size: var(--font40);
+  }
+}

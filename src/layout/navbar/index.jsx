@@ -12,13 +12,14 @@ import FormContext from "@/context/form.context";
 import LangSwitcher from "../langSwitcher";
 import NavList from "../navList";
 import MenuIcon from "../menuIcon";
-import NavbarInfo from "../navbarInfo";
 
 function Navbar({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   const { form, setForm } = useContext(FormContext);
   const { open, setOpen } = useContext(SidebarContext);
+  const [bgColor, setBgColor] = useState(false);
+  const [scrollFired, setScrollFired] = useState(false);
   const { t, i18n } = useTranslation(lng);
 
   const goToTop = () => {
@@ -27,15 +28,34 @@ function Navbar({ lng, ...props }) {
       behavior: "smooth",
     });
   };
+  const changeColor = () => {
+    if (window.scrollY > 50) {
+      setBgColor(true);
+      setScrollFired(true);
+    } else {
+      setBgColor(false);
+      setScrollFired(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
 
   return (
     <>
-      <Box className={classes.navbarTop}>
+      <Box
+        className={`${classes.navbarTop} ${
+          scrollFired ? classes.navbarTopScrolled : ""
+        }`}
+      >
         <LangSwitcher lng={lng} />
         <SocialMedia />
       </Box>
 
-      <Box className={classes.navbar}>
+      <Box
+        className={`${classes.navbar} ${
+          scrollFired ? classes.navbarScrolled : ""
+        }`}
+      >
         <Box
           className={classes.navbarInner}
           sx={{ zIndex: form ? (mdUp ? 14 : 18) : 18 }}
@@ -73,8 +93,6 @@ function Navbar({ lng, ...props }) {
             </Button>
           </Box>
         </Box>
-
-        <NavbarInfo lng={lng} />
       </Box>
     </>
   );
