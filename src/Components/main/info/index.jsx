@@ -7,6 +7,7 @@ import Title from "@/Components/common/title";
 import Image from "next/image";
 import Link from "next/link";
 import EnterSolar from "@/Components/common/enterSolar";
+import Container from "@/Container/Container";
 
 function Info({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -14,43 +15,45 @@ function Info({ lng, ...props }) {
 
   return (
     <Box className={classes.info}>
-      <EnterSolar />
-      <ul className={classes.infoList}>
-        <li className={classes.infoItem}>
-          <Title title={t("Энергия солнца \n в каждый дом")} />
-          <Box className={classes.infoTextBox}>
-            <p className={classes.infoDesc}>
-              {t("Наше отличие - качественный сервис.")}
+      <Container>
+        <EnterSolar />
+        <ul className={classes.infoList}>
+          <li className={classes.infoItem}>
+            <Title title={t("Энергия солнца \n в каждый дом")} />
+            <Box className={classes.infoTextBox}>
+              <p className={classes.infoDesc}>
+                {t("Наше отличие - качественный сервис.")}
+              </p>
+              <p className={classes.infoText}>
+                {t("От производства ФЭС до обслуживания станций.")}
+              </p>
+            </Box>
+          </li>
+
+          <li className={classes.infoItem}>
+            <Image
+              src={"/static/site/info-img.png"}
+              width={447}
+              height={245}
+              alt={"info-img"}
+              priority
+              className={classes.infoImg}
+            />
+          </li>
+
+          <li className={classes.infoItem}>
+            <p className={`${classes.infoText} ${classes.infoTextSize}`}>
+              {t(
+                "Мы всегда честны с нашими заказчиками и предоставляем надёжные оптимальные решения, которые бесперебойно работают десятки лет."
+              )}
             </p>
-            <p className={classes.infoText}>
-              {t("От производства ФЭС до обслуживания станций.")}
-            </p>
-          </Box>
-        </li>
 
-        <li className={classes.infoItem}>
-          <Image
-            src={"/static/site/info-img.png"}
-            width={447}
-            height={245}
-            alt={"info-img"}
-            priority
-            className={classes.infoImg}
-          />
-        </li>
-
-        <li className={classes.infoItem}>
-          <p className={`${classes.infoText} ${classes.infoTextSize}`}>
-            {t(
-              "Мы всегда честны с нашими заказчиками и предоставляем надёжные оптимальные решения, которые бесперебойно работают десятки лет."
-            )}
-          </p>
-
-          <Link href={"/"} className={classes.infoLink}>
-            {t("Подробнее о компании")}
-          </Link>
-        </li>
-      </ul>
+            <Link href={"/"} className={classes.infoLink}>
+              {t("Подробнее о компании")}
+            </Link>
+          </li>
+        </ul>
+      </Container>
     </Box>
   );
 }

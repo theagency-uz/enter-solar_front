@@ -1,0 +1,12 @@
+.business {
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+@media (min-width: 992px) {
+  .business {
+    padding-top: 170px;
+    margin-bottom: 120px;
+  }
+}

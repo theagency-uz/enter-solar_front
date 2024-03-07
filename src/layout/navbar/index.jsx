@@ -55,11 +55,9 @@ function Navbar({ lng, ...props }) {
         className={`${classes.navbar} ${
           scrollFired ? classes.navbarScrolled : ""
         }`}
+        sx={{ zIndex: form ? (mdUp ? 14 : 18) : 18 }}
       >
-        <Box
-          className={classes.navbarInner}
-          sx={{ zIndex: form ? (mdUp ? 14 : 18) : 18 }}
-        >
+        <Box className={classes.navbarInner}>
           <Box className={classes.navbarWrapper}>
             <Link href={"/"} className={classes.navbarImage}>
               <Image

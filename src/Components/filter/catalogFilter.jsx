@@ -1,7 +1,7 @@
 "use client";
 import { useTranslation } from "@/app/i18n/client";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import classes from "./styles.module.css";
 import Image from "next/image";
 

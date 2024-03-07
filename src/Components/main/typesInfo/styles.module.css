@@ -1,5 +1,5 @@
 .typesInfo {
-  padding: 50px 10px;
+  padding: 50px 0px;
   margin-bottom: 50px;
   background: url("/static/site/typeinfo-bg.png");
   background-repeat: no-repeat;
@@ -96,7 +96,7 @@ button.typesInfoBtn:hover {
 
 @media (min-width: 992px) {
   .typesInfo {
-    padding: 100px 40px;
+    padding: 100px 0px;
     margin-bottom: 120px;
     aspect-ratio: 3 / 2;
   }

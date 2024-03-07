@@ -1,0 +1,136 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 70px;
+}
+
+.aboutTitle {
+  color: #000;
+  font-family: "Stapel";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 91%;
+}
+
+.aboutList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.aboutItemImg {
+  display: flex;
+  width: 100%;
+}
+.aboutImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.aboutItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.aboutNumberBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aboutNumber {
+  color: #2e2e2e;
+  font-family: "Stapel";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  padding-left: 10px;
+}
+
+.border {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+}
+
+.aboutTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aboutDesc {
+  color: #2e2e2e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.aboutText {
+  color: #2e2e2e;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110.162%;
+}
+
+@media (min-width: 576px) {
+  .aboutItemImg {
+    width: calc(50% - 20px / 2);
+  }
+
+  .aboutItem {
+    width: calc(50% - 20px / 2);
+  }
+}
+
+
+@media (min-width: 992px) {
+  .about {
+    gap: 30px;
+    margin-bottom: 120px;
+  }
+  .aboutTitle {
+    font-size: var(--font50);
+    max-width: 56vw;
+  }
+
+  .aboutItem {
+    gap: 70px;
+  }
+
+  .aboutItemImg {
+    width: calc(25% - 60px / 4);
+  }
+
+  .aboutItem {
+    width: calc(25% - 60px / 4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .aboutNumber {
+    font-size: var(--font60);
+  }
+
+  .aboutDesc {
+    font-size: var(--font14);
+  }
+
+  .aboutText {
+    font-size: var(--font14);
+  }
+}

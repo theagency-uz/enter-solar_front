@@ -8,6 +8,7 @@ import classes from "./styles.module.css";
 import Title from "@/Components/common/title";
 import articlesData from "@/data/articlesData";
 import ArticlesItem from "./articlesItem";
+import Container from "@/Container/Container";
 
 function Articles({ lng, ...props }) {
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
@@ -15,10 +16,44 @@ function Articles({ lng, ...props }) {
 
   return (
     <Box className={classes.articles}>
-      <Box className={classes.articlesWrapper}>
-        <Title title={t("Новости и статьи")} />
+      <Container>
+        <Box className={classes.articlesWrapper}>
+          <Title title={t("Новости и статьи")} />
 
-        {smUp && (
+          {smUp && (
+            <Link href={"/"} className={classes.articlesLink}>
+              <span>{t("смотреть все")}</span>
+              <Image
+                src={"/icons/arrow-up.svg"}
+                width={6}
+                height={6}
+                alt={"icon"}
+                priority
+                className={classes.articlesIcon}
+              />
+            </Link>
+          )}
+        </Box>
+
+        {smUp ? (
+          <ul className={classes.articlesList}>
+            {articlesData.slice(0, 3).map((article, index) => {
+              return (
+                <ArticlesItem lng={lng} article={article} key={article.id} />
+              );
+            })}
+          </ul>
+        ) : (
+          <ul className={classes.articlesList}>
+            {articlesData.slice(0, 2).map((article, index) => {
+              return (
+                <ArticlesItem lng={lng} article={article} key={article.id} />
+              );
+            })}
+          </ul>
+        )}
+
+        {!smUp && (
           <Link href={"/"} className={classes.articlesLink}>
             <span>{t("смотреть все")}</span>
             <Image
@@ -31,39 +66,7 @@ function Articles({ lng, ...props }) {
             />
           </Link>
         )}
-      </Box>
-
-      {smUp ? (
-        <ul className={classes.articlesList}>
-          {articlesData.slice(0, 3).map((article, index) => {
-            return (
-              <ArticlesItem lng={lng} article={article} key={article.id} />
-            );
-          })}
-        </ul>
-      ) : (
-        <ul className={classes.articlesList}>
-          {articlesData.slice(0, 2).map((article, index) => {
-            return (
-              <ArticlesItem lng={lng} article={article} key={article.id} />
-            );
-          })}
-        </ul>
-      )}
-
-      {!smUp && (
-        <Link href={"/"} className={classes.articlesLink}>
-          <span>{t("смотреть все")}</span>
-          <Image
-            src={"/icons/arrow-up.svg"}
-            width={6}
-            height={6}
-            alt={"icon"}
-            priority
-            className={classes.articlesIcon}
-          />
-        </Link>
-      )}
+      </Container>
     </Box>
   );
 }

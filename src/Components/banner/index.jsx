@@ -10,12 +10,12 @@ function Banner({ lng, ...props }) {
   const { form, setForm } = useContext(FormContext);
 
   return (
-    <Box className={classes.navbarInfo}>
+    <Box className={classes.bannerInfo}>
       <Box className={classes.navbaTextBox}>
-        <h2 className={classes.navbarTitle}>
+        <h2 className={classes.bannerTitle}>
           {t("Чистая энергия \n в вашем доме")}
         </h2>
-        <p className={classes.navbarText}>
+        <p className={classes.bannerText}>
           {t(
             "Фото-электрические станции и комплектующие для частных или коммерческих участков."
           )}
@@ -23,7 +23,7 @@ function Banner({ lng, ...props }) {
       </Box>
 
       <Button
-        className={classes.navbarFormBtn}
+        className={classes.bannerFormBtn}
         onClick={() => setForm({ open: true })}
         disableRipple={true}
       >

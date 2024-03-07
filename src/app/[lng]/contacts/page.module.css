@@ -1,5 +1,5 @@
 .contacts {
-  padding: 0 10px;
+  padding-top: 100px;
   margin-bottom: 50px;
 }
 
@@ -15,7 +15,7 @@
 
 @media (min-width: 992px) {
   .contacts {
-    padding: 0 40px;
+    padding-top: 170px;
     margin-bottom: 120px;
   }
   .contactsTitle {

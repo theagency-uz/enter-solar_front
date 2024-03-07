@@ -6,7 +6,7 @@ import FaqAccordion from "./faqAccordion";
 import EnterSolar from "@/Components/common/enterSolar";
 
 import classes from "./styles.module.css";
-
+import Container from "@/Container/Container";
 
 function Faq({ lng, isOpen, setIsOpen, ...props }) {
   const { t, i18n } = useTranslation(lng);
@@ -14,14 +14,16 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
 
   return (
     <Box className={classes.faq}>
-      <Box className={classes.faqInner}>
-        <Title title={t("Ответы на частые вопросы")} lng={lng} />
-      </Box>
+      <Container>
+        <Box className={classes.faqInner}>
+          <Title title={t("Ответы на частые вопросы")} lng={lng} />
+        </Box>
 
-      <FaqAccordion lng={lng} isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Box className={classes.imageBox}>
-        <EnterSolar />
-      </Box>
+        <FaqAccordion lng={lng} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Box className={classes.imageBox}>
+          <EnterSolar />
+        </Box>
+      </Container>
     </Box>
   );
 }

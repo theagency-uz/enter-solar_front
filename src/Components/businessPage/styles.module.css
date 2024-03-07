@@ -1,0 +1,36 @@
+
+
+
+
+.formContentWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px 10px 30px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+.formContentImgBox {
+  display: flex;
+}
+
+.formContentImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  
+  .formContentWrapper {
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px 30px;
+    margin-top: 80px;
+  }
+
+  .formContentImgBox {
+    width: 50%;
+  }
+}

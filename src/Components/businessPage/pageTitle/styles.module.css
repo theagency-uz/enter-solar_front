@@ -1,0 +1,15 @@
+.title {
+  color: #8d8d8d;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130.612%;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: var(--font14);
+  }
+}

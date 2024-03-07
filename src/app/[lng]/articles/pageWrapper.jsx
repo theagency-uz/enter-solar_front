@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./page.module.css";
 import ArticlesPage from "@/Components/articlesPage";
 import articlesData from "@/data/articlesData";
+import Container from "@/Container/Container";
 
 function PageWrapper({ lng, ...props }) {
   const { t } = useTranslation(lng);
@@ -32,21 +33,22 @@ function PageWrapper({ lng, ...props }) {
 
   return (
     <Box className={classes.newsPage}>
-      <h3 className={classes.newsTitle}>{t("Новости и статьи")}</h3>
+      <Container>
+        <h3 className={classes.newsTitle}>{t("Новости и статьи")}</h3>
 
-      <ArticlesPage lng={lng} articles={articles} />
-      {/* <Pagination className={classes.pagination} count={4} /> */}
+        <ArticlesPage lng={lng} articles={articles} />
 
-      {pageCount > 0 && (
-        <Pagination
-          className={classes.pagination}
-          count={pageCount}
-          defaultPage={page}
-          page={page}
-          onChange={handlePaginationChange}
-          onClick={goToTop}
-        />
-      )}
+        {pageCount > 0 && (
+          <Pagination
+            className={classes.pagination}
+            count={pageCount}
+            defaultPage={page}
+            page={page}
+            onChange={handlePaginationChange}
+            onClick={goToTop}
+          />
+        )}
+      </Container>
     </Box>
   );
 }

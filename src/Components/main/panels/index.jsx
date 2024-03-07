@@ -6,6 +6,7 @@ import classes from "./styles.module.css";
 import Title from "@/Components/common/title";
 import panelsData from "@/data/panelsData";
 import PanelItem from "./panelItem";
+import Container from "@/Container/Container";
 
 function Panels({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
@@ -13,13 +14,15 @@ function Panels({ lng, ...props }) {
 
   return (
     <Box className={classes.panel}>
-      <Title title={t("Оптимальные места для солнечных панелей")} />
+      <Container>
+        <Title title={t("Оптимальные места для солнечных панелей")} />
 
-      <ul className={classes.panelList}>
-        {panelsData.map((panel, index) => {
-          return <PanelItem lng={lng} key={panel.id} panel={panel} />;
-        })}
-      </ul>
+        <ul className={classes.panelList}>
+          {panelsData.map((panel, index) => {
+            return <PanelItem lng={lng} key={panel.id} panel={panel} />;
+          })}
+        </ul>
+      </Container>
     </Box>
   );
 }
