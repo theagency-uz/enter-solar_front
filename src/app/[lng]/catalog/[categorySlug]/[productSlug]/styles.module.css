@@ -1,6 +1,6 @@
 .productInfo {
   margin-bottom: 80px;
-  padding: 0 10px;
+  padding-top: 100px;
 }
 .productInfoWrapper {
   display: flex;
@@ -11,13 +11,14 @@
 }
 
 @media (min-width: 992px) {
+  .productInfo {
+    margin-bottom: 120px;
+    padding-top: 190px;
+  }
+
   .productInfoWrapper {
     flex-direction: row;
     gap: 40px;
     margin-bottom: 120px;
-  }
-  .productInfo {
-    margin-bottom: 120px;
-    padding: 0 40px;
   }
 }

@@ -16,7 +16,9 @@ function Info({ lng, ...props }) {
   return (
     <Box className={classes.info}>
       <Container>
-        <EnterSolar />
+        <Box className={classes.imgBox}>
+          <EnterSolar />
+        </Box>
         <ul className={classes.infoList}>
           <li className={classes.infoItem}>
             <Title title={t("Энергия солнца \n в каждый дом")} />

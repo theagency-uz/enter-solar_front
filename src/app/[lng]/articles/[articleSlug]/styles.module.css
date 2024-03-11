@@ -1,0 +1,11 @@
+.articleInfo {
+  margin-bottom: 80px;
+  padding-top: 100px;
+}
+
+@media (min-width: 992px) {
+  .articleInfo {
+    margin-bottom: 120px;
+    padding-top: 190px;
+  }
+}

@@ -2,22 +2,41 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 30px;
-  padding: 10px 10px 40px;
-  background: url("/static/site/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
   margin-bottom: 65px;
+  aspect-ratio: 4 / 7;
 }
 
-.navbaTextBox {
+.bannerBox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bannerTextBox {
   display: flex;
   flex-direction: column;
   gap: 11px;
 }
 
-.bannerTitle {
+.bannerTextBox h2 {
   color: #fff;
   font-family: "Stapel";
   font-size: 30px;
@@ -27,7 +46,7 @@
   white-space: pre-line;
 }
 
-.bannerText {
+.bannerTextBox p {
   color: #fff;
   font-family: "Stapel";
   font-size: var(--font14);
@@ -55,15 +74,19 @@ button.bannerFormBtn:hover {
 }
 
 @media (min-width: 992px) {
-  .bannerInfo {
-    padding: 20px 50px 50px 32px;
-    margin-bottom: 104px;
+  .wrapper {
+    bottom: 50px;
+    left: 40px;
   }
-  .bannerText {
+  .bannerInfo {
+    margin-bottom: 104px;
+    aspect-ratio: 2 / 1;
+  }
+  .bannerTextBox p {
     max-width: 23vw;
   }
 
-  .bannerTitle {
+  .bannerTextBox h2  {
     font-size: var(--font60);
   }
 }

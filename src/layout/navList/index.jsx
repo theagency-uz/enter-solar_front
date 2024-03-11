@@ -10,7 +10,8 @@ function NavList({ lng, setOpen, ...props }) {
     <ul className={classes.navList}>
       <li className={classes.navItem}>
         <Link
-          href={"#catalog"}
+          // href={`/${lng}/catalog/${category.slug}`}
+          href={"/catalog/category"}
           onClick={(e) => {
             setOpen(false);
           }}

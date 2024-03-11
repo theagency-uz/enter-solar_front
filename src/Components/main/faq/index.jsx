@@ -8,7 +8,7 @@ import EnterSolar from "@/Components/common/enterSolar";
 import classes from "./styles.module.css";
 import Container from "@/Container/Container";
 
-function Faq({ lng, isOpen, setIsOpen, ...props }) {
+function Faq({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
 
@@ -19,7 +19,7 @@ function Faq({ lng, isOpen, setIsOpen, ...props }) {
           <Title title={t("Ответы на частые вопросы")} lng={lng} />
         </Box>
 
-        <FaqAccordion lng={lng} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <FaqAccordion lng={lng} />
         <Box className={classes.imageBox}>
           <EnterSolar />
         </Box>

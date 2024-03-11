@@ -10,6 +10,10 @@
   flex-wrap: wrap;
 }
 
+.imgBox {
+  margin-bottom: 30px;
+}
+
 .infoItem {
   display: flex;
   flex-direction: column;

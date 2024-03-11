@@ -1,0 +1,25 @@
+.breadCrumbs {
+  color: #a0a0a0;
+  display: none;
+}
+
+.link {
+  color: #a0a0a0;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+@media (min-width: 576px) {
+  .breadCrumbs {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .link {
+    font-size: var(--font14);
+  }
+}

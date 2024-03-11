@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import FaqItem from './faqItem';
 import faqData from '@/data/faqData';
 
-function FaqAccordion({ lng, isOpen, setIsOpen, ...props }) {
+function FaqAccordion({ lng, ...props }) {
 
   const [expanded, setExpanded] = useState(false);
   const handleChange = (panel) => (event, isExpanded) => {

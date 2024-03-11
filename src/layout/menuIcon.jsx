@@ -67,6 +67,7 @@ export default function MenuIcon({}) {
         setMenuOpen(!menuOpen);
       }}
       style={{
+        display: "flex",
         background: "none",
         border: "none",
       }}

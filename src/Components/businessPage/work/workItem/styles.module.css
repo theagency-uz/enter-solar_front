@@ -1,0 +1,67 @@
+.accordionBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.title {
+  color: #b9b9b9;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.expandedTitle {
+  color: #2c2c2c;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.text {
+  color: #2e2e2e;
+  font-family: Stapel;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110.162%;
+  margin-top: 15px;
+}
+.imgBox {
+  display: flex;
+  width: 100%;
+}
+
+.workImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .accordionBox {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .workImg {
+    aspect-ratio: 7 /4;
+  }
+}
+@media (min-width: 1200px) {
+  .title {
+    font-size: var(--font14);
+  }
+
+  .expandedTitle {
+    font-size: var(--font14);
+  }
+
+  .text {
+    font-size: var(--font14);
+  }
+}

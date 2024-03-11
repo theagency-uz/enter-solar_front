@@ -8,6 +8,7 @@ import ProductInfo from "@/Components/productInfo";
 import ProductTabs from "@/Components/productTabs";
 import classes from "./styles.module.css";
 import productData from "@/data/productData";
+import Container from "@/Container/Container";
 
 function Product({ params: { lng, categorySlug, productSlug }, ...props }) {
   const { t } = useTranslation(lng);
@@ -17,11 +18,13 @@ function Product({ params: { lng, categorySlug, productSlug }, ...props }) {
 
   return (
     <Box className={classes.productInfo}>
-      <Box className={classes.productInfoWrapper}>
-        <ProductImages productImage={product} />
-        <ProductInfo lng={lng} product={product} />
-      </Box>
-      <ProductTabs lng={lng} product={product} />
+      <Container>
+        <Box className={classes.productInfoWrapper}>
+          <ProductImages productImage={product} />
+          <ProductInfo lng={lng} product={product} />
+        </Box>
+        <ProductTabs lng={lng} product={product} />
+      </Container>
     </Box>
   );
 }

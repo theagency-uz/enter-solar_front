@@ -54,8 +54,8 @@ function ContactsPage({ lng, ...props }) {
           </Box>
         </Box>
       </Container>
-
       <YandexMap type="desktop" lng={lng} />
+
       <Container>
         <Box className={classes.formContentWrapper}>
           <FormWrapper lng={lng} />
