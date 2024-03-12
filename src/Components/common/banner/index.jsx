@@ -7,7 +7,7 @@ import FormContext from "@/context/form.context";
 import Image from "next/image";
 import Container from "@/Container/Container";
 
-function Banner({ lng, content, textContent, ...props }) {
+function Banner({ lng, content, type, textContent, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
   const { form, setForm } = useContext(FormContext);
@@ -31,6 +31,9 @@ function Banner({ lng, content, textContent, ...props }) {
           priority
           className={classes.image}
         />
+        {type === "video" && (
+          <video src={content} autoPlay={true} muted loop playsInline />
+        )}
         <Box className={classes.wrapper}>
           <Box className={classes.bannerTextBox}>{textContent}</Box>
 

@@ -7,6 +7,48 @@
   position: relative;
   margin-bottom: 25px;
 }
+.navItem button {
+  color: #606060;
+  font-family: "Stapel";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 185.714%;
+  text-transform: lowercase;
+  position: relative;
+  display: flex;
+  margin: auto;
+}
+
+.catalogDropdown {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.categoryName {
+  color: #606060;
+  font-family: "Stapel";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 185.714%;
+  text-transform: lowercase;
+}
+.navItem button:hover {
+  background: transparent;
+}
+
+.categoryBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
 .navItem {
   color: #606060;
@@ -16,6 +58,7 @@
   font-weight: 300;
   line-height: 185.714%;
   text-transform: lowercase;
+  position: relative;
 }
 
 @media (min-width: 992px) {
@@ -25,10 +68,24 @@
     margin-bottom: 0;
     flex-direction: row;
   }
+  .catalogDropdown {
+    position: absolute;
+    text-align: start;
+  }
+
+  .navItem button {
+    margin: initial;
+  }
 }
 
 @media (min-width: 1440px) {
   .navItem {
+    font-size: var(--font14);
+  }
+  .categoryName {
+    font-size: var(--font14);
+  }
+  .navItem button {
     font-size: var(--font14);
   }
 }

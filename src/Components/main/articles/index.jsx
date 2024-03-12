@@ -21,7 +21,7 @@ function Articles({ lng, ...props }) {
           <Title title={t("Новости и статьи")} />
 
           {smUp && (
-            <Link href={"/"} className={classes.articlesLink}>
+            <Link href={"/articles"} className={classes.articlesLink}>
               <span>{t("смотреть все")}</span>
               <Image
                 src={"/icons/arrow-up.svg"}

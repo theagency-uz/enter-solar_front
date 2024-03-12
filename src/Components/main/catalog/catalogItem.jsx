@@ -9,7 +9,11 @@ function CatalogItem({ lng, catalog, ...props }) {
   const { t, i18n } = useTranslation(lng);
 
   return (
-    <Link href={"/"} className={classes.catalogLink}>
+    <Link
+      // href={`/catalog?category=${category.id}`}
+      href={`/catalog/category`}
+      className={classes.catalogLink}
+    >
       <Box className={classes.catalogWrapper}>
         <Box className={classes.catalogInner}>
           <h4 className={classes.catalogDesc}>{t(catalog.title)}</h4>

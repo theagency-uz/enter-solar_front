@@ -10,7 +10,7 @@ import PageTitle from "../pageTitle";
 function AboutCompany({ lng, ...props }) {
   const { t } = useTranslation(lng);
   return (
-    <Box className={classes.company}>
+    <Box className={classes.company} id="company">
       <Box className={classes.companyWrapper}>
         <PageTitle title={"о компании"} />
         <span className={classes.border}></span>

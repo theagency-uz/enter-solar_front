@@ -17,7 +17,8 @@ async function Home({ params: { lng }, ...props }) {
   return (
     <main>
       <Banner
-        content={"/static/site/bg.png"}
+        content={"/videos/main-page.mp4"}
+        type="video"
         textContent={
           <>
             <h2>{t("Чистая энергия \n в вашем доме")}</h2>

@@ -30,7 +30,7 @@ function Business({ lng, ...props }) {
                   "Мы работаем с различными сферами: офисы, ретейл, хорека и другие направления."
                 )}
               </p>
-              <Link className={classes.businessLink} href={"/"}>
+              <Link className={classes.businessLink} href={"/business"}>
                 {t("Подробнее")}
               </Link>
             </Box>

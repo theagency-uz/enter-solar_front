@@ -50,7 +50,7 @@ function Info({ lng, ...props }) {
               )}
             </p>
 
-            <Link href={"/"} className={classes.infoLink}>
+            <Link href={"/business/#company"} className={classes.infoLink}>
               {t("Подробнее о компании")}
             </Link>
           </li>

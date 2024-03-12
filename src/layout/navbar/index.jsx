@@ -38,7 +38,9 @@ function Navbar({ lng, ...props }) {
     }
   };
 
-  window.addEventListener("scroll", changeColor);
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeColor);
+  }
 
   return (
     <>
@@ -55,7 +57,10 @@ function Navbar({ lng, ...props }) {
         className={`${classes.navbar} ${
           scrollFired ? classes.navbarScrolled : ""
         }`}
-        sx={{ zIndex: form ? (mdUp ? 14 : 18) : 18 }}
+        sx={{
+          zIndex: form ? (mdUp ? 14 : 18) : 18,
+          boxShadow: open ? "none" : "",
+        }}
       >
         <Box className={classes.navbarInner}>
           <Box className={classes.navbarWrapper}>
@@ -70,7 +75,9 @@ function Navbar({ lng, ...props }) {
               />
             </Link>
 
-            {mdUp && <NavList lng={lng} setOpen={setOpen} />}
+            {mdUp && (
+              <NavList lng={lng} setOpen={setOpen} scrollFired={scrollFired} />
+            )}
 
             {!mdUp && <MenuIcon />}
           </Box>

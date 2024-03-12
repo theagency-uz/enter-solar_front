@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { Box, Button, useMediaQuery } from "@mui/material";
 import { useTranslation } from "@/app/i18n/client";
 import classes from "./styles.module.css";
 import Container from "@/Container/Container";
+import FormContext from "@/context/form.context";
 
 function TypesInfo({ lng, ...props }) {
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up("md"));
   const { t, i18n } = useTranslation(lng);
+  const { form, setForm } = useContext(FormContext);
 
   return (
     <Box className={classes.typesInfo}>
@@ -43,7 +45,10 @@ function TypesInfo({ lng, ...props }) {
         </Box>
 
         <Box className={classes.typesInfoBtnBox}>
-          <Button className={classes.typesInfoBtn}>
+          <Button
+            className={classes.typesInfoBtn}
+            onClick={() => setForm({ open: true })}
+          >
             {t("Получить консультацию")}
           </Button>
         </Box>

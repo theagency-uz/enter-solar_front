@@ -14,6 +14,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: 1;
 }
 
 .wrapper {
@@ -73,6 +74,16 @@ button.bannerFormBtn:hover {
   background: #ff8115;
 }
 
+.bannerBox video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
 @media (min-width: 992px) {
   .wrapper {
     bottom: 50px;
@@ -86,7 +97,7 @@ button.bannerFormBtn:hover {
     max-width: 23vw;
   }
 
-  .bannerTextBox h2  {
+  .bannerTextBox h2 {
     font-size: var(--font60);
   }
 }

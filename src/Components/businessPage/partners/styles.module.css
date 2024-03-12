@@ -48,6 +48,15 @@
   opacity: 0.4;
 }
 
+.videoBox {
+  display: flex;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 768px) {
   .partnersItem {
     width: calc(20% - 40px / 5);
