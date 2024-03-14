@@ -18,7 +18,8 @@
   overflow-y: visible;
   overflow-x: hidden;
   min-height: 100vh;
-  background: #000;
+  background: #fff;
+
 }
 
 .logo {

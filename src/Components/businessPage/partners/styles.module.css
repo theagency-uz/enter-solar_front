@@ -50,6 +50,7 @@
 
 .videoBox {
   display: flex;
+  margin: 0 -10px;
 }
 
 .video {
@@ -67,4 +68,8 @@
   .partners {
     margin-bottom: 120px;
   }
+  .videoBox {
+    margin: 0 -40px;
+  }
+  
 }

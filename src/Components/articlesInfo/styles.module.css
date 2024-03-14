@@ -85,7 +85,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .articlesDate {
     font-size: var(--font14);
   }

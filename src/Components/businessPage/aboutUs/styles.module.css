@@ -121,7 +121,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .aboutNumber {
     font-size: var(--font60);
   }

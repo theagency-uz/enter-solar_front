@@ -326,7 +326,7 @@ button.notifBtn {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .accordionSvg {
     top: 2px;
   }

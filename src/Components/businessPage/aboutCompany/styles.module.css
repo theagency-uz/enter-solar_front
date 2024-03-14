@@ -166,7 +166,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .companyText {
     font-size: var(--font14);
   }

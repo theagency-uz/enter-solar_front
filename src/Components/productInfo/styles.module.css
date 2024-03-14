@@ -80,7 +80,7 @@ button.productBtn:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .productTitle {
     color: #000;
     font-family: "Stapel";

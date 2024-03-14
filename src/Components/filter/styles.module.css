@@ -96,7 +96,7 @@ button.filterTitleBtn:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .filterTitle {
     font-size: var(--font14);
   }
