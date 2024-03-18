@@ -2,6 +2,7 @@ import ContactsPage from "@/Components/contactsPage";
 import { Box } from "@mui/material";
 import classes from "./page.module.css";
 import { useTranslation } from "@/app/i18n";
+import BreadCrumbs from "@/Components/common/breadCrumbs";
 
 // export async function generateMetadata({
 //   params: { lng, categorySlug },
@@ -29,8 +30,19 @@ async function Contacts({ params: { lng } }) {
   //   },
   // ]
 
+  const links = [
+    {
+      name: "Контакты",
+      link: `/contacts`,
+      id: "contacts",
+    },
+  ];
+
   return (
     <Box className={classes.contacts}>
+      <Box className={classes.catalogCrumbs}>
+        <BreadCrumbs links={links} lng={lng} />
+      </Box>
       <ContactsPage lng={lng} />
     </Box>
   );

@@ -6,6 +6,7 @@ import Container from "@/Container/Container";
 import Filter from "@/Components/filter";
 import CatalogProduct from "@/Components/catalogProduct";
 import classes from "./page.module.css";
+import BreadCrumbs from "@/Components/common/breadCrumbs";
 
 // export async function generateMetadata({
 //   params: { lng, categorySlug },
@@ -28,6 +29,14 @@ async function Catalog({ params: { lng }, ...props }) {
 
   const { t } = await useTranslation(lng);
 
+  const links = [
+    {
+      name: "ФЭМ",
+      link: `category`,
+      id: "catalog",
+    },
+  ];
+
   // const links = [
   //   {
   //     name: category.attributes.name,
@@ -39,6 +48,9 @@ async function Catalog({ params: { lng }, ...props }) {
   return (
     <Container>
       <Box className={classes.catalog}>
+        <Box className={classes.catalogCrumbs}>
+          <BreadCrumbs links={links} lng={lng} />
+        </Box>
         <h3 className={classes.catalogTitle}>
           {t("Фото-электрические модули")}
         </h3>

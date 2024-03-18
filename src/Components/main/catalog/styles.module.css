@@ -78,8 +78,8 @@
 
 .catalogImg {
   width: 100%;
-  /* height: auto;
-  object-fit: cover; */
+  height: auto;
+  /* object-fit: contain; */
 }
 
 @media (min-width: 992px) {
@@ -136,5 +136,9 @@
 @media (min-width: 1440px) {
   .catalogTitle {
     font-size: var(--font14);
+  }
+  .catalogImg {
+    width: 100%;
+    height: fit-content;
   }
 }

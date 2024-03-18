@@ -71,18 +71,18 @@ function ProductTabsPanel({ lng, product, ...props }) {
 
           <TabPanel value="2" className={classes.tabPanel}>
             <div
-              // dangerouslySetInnerHTML={{
-              //   __html: product.description[i18n.language],
-              // }}
-              className={classes.editorBox}
+              dangerouslySetInnerHTML={{
+                __html: product.description,
+              }}
+              className={classes.editor}
             ></div>
           </TabPanel>
           <TabPanel value="3" className={classes.tabPanel}>
             <div
-              // dangerouslySetInnerHTML={{
-              //   __html: product.description[i18n.language],
-              // }}
-              className={classes.editorBox}
+              dangerouslySetInnerHTML={{
+                __html: product.description,
+              }}
+              className={classes.editor}
             ></div>
           </TabPanel>
         </Box>

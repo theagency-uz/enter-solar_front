@@ -22,7 +22,11 @@ function ContactsPage({ lng, ...props }) {
             <span className={classes.contactsDesc}>
               {t("Адрес производства")}:
             </span>
-            <a href="/" className={classes.contactsLink} target="_blank">
+            <a
+              href="https://yandex.uz/maps/-/CDF2RZ9G"
+              className={classes.contactsLink}
+              target="_blank"
+            >
               {t(
                 "Ташкентская область, Янгиюльский район г. Ханкурган, махалля Кош-Тепа, Улица Тимура, дом 14"
               )}

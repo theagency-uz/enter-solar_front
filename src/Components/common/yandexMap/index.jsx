@@ -104,8 +104,8 @@ export default function YandexMap({ type, lng, ...props }) {
                   geometry={[marker.position.lat, marker.position.lng]}
                   options={{
                     // balloonContentLayout: <button>{marker.address}</button>,
-                    // preset: "islands#icon",
-                    iconColor: "blue",
+                    preset: "islands#icon",
+                    iconColor: "orange",
                   }}
                   properties={{
                     hasHint: true,

@@ -13,10 +13,19 @@
   margin-bottom: 20px;
 }
 
+.catalogCrumbs {
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
 @media (min-width: 992px) {
   .contacts {
     padding-top: 170px;
     margin-bottom: 120px;
+  }
+  .catalogCrumbs {
+    margin-bottom: 40px;
+    padding: 0 40px;
   }
   .contactsTitle {
     font-size: var(--font40);

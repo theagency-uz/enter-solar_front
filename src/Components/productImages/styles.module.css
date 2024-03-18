@@ -24,6 +24,7 @@
 
 .productBottomSwiperItem {
   display: flex;
+  padding: 1px;
 }
 
 .productBottomSwiper :global(.swiper-slide-thumb-active) {

@@ -10,9 +10,9 @@ async function BreadCrumbs({ lng, links, ...props }) {
       <Link className={classes.link} href={`/${lng}`}>
         {t("Главная")}
       </Link>
+      <span className={classes.link}>/</span>
       {links.map((link) => (
         <Link key={link.id} href={link.link} className={classes.link}>
-          {" / "}
           {link.name}
         </Link>
       ))}

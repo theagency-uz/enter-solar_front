@@ -6,6 +6,8 @@ import FormContext from "@/context/form.context";
 import FormBar from "@/layout/formBar";
 import Loading from "@/Components/common/loading";
 import Notificationcontext from "@/context/notification.context";
+import NextTopLoader from "nextjs-toploader";
+import Notification from "@/Components/common/form/notification";
 
 export default function Providers({ lng, children }) {
   const [loading, setLoading] = useState(true);
@@ -36,6 +38,16 @@ export default function Providers({ lng, children }) {
             <Notificationcontext.Provider value={notifyValue}>
               <FormContext.Provider value={formValue}>
                 <SidebarContext.Provider value={sidebarValue}>
+                  <NextTopLoader color="#fff" showSpinner={false} />
+                  <Notification
+                    handleClose={() =>
+                      setNotify((n) => {
+                        return { ...n, open: false };
+                      })
+                    }
+                    open={notify.open}
+                    text={notify.text}
+                  />
                   <FormBar form={form} setForm={setForm} lng={lng} />
                   {children}
                 </SidebarContext.Provider>

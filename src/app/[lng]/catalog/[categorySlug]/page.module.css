@@ -20,6 +20,10 @@
   gap: 30px;
 }
 
+.catalogCrumbs {
+  margin-bottom: 40px;
+}
+
 @media (min-width: 992px) {
   .catalog {
     padding-top: 170px;
@@ -34,7 +38,9 @@
     flex-direction: row;
     gap: 40px;
   }
-  
+  .catalogCrumbs {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 1440px) {

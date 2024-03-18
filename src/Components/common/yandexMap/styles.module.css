@@ -2,8 +2,6 @@
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
 }
-
-
 /* .map :global(.ymaps-2-1-79-inner-panes) {
   filter: invert(100%);
   -ms-filter: invert(100%);
