@@ -28,22 +28,22 @@ function Footer({ lng, ...props }) {
               <p className={classes.footerListTitle}>{t("меню")}</p>
               <ul className={classes.footerList}>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/business"} className={classes.footerLink}>
                     {t("Для бизнеса")}
                   </Link>
                 </li>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/business#company"} className={classes.footerLink}>
                     {t("О нас")}
                   </Link>
                 </li>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/articles"} className={classes.footerLink}>
                     {t("Статьи")}
                   </Link>
                 </li>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/contacts"} className={classes.footerLink}>
                     {t("Контакты")}
                   </Link>
                 </li>
@@ -54,17 +54,17 @@ function Footer({ lng, ...props }) {
               <p className={classes.footerListTitle}>{t("Каталог")}</p>
               <ul className={classes.footerList}>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/catalog/category"} className={classes.footerLink}>
                     {t("ФЭС")}
                   </Link>
                 </li>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/catalog/category"} className={classes.footerLink}>
                     {t("ФЭМ")}
                   </Link>
                 </li>
                 <li className={classes.footerListItem}>
-                  <Link href={"/"} className={classes.footerLink}>
+                  <Link href={"/catalog/category"} className={classes.footerLink}>
                     {t("Комплектующие")}
                   </Link>
                 </li>
@@ -106,16 +106,16 @@ function Footer({ lng, ...props }) {
         </Link>
 
         <Box className={classes.footerConnect}>
-          <Link href={"/"} className={classes.footerAddress} target="_blank">
+          <a href={"https://yandex.uz/maps/-/CDF2RZ9G"} className={classes.footerAddress} target="_blank">
             {t("Ташкентская область, г. Ханкурган, Улица Тимура, дом 14")}
-          </Link>
-          <Link
+          </a>
+          <a
             href={"tel: +998 94 998 94 94"}
             className={classes.footerNumber}
             target="_blank"
           >
             +998 94 998 94 94
-          </Link>
+          </a>
         </Box>
 
         <Box className={classes.footerBottom}>
@@ -148,22 +148,22 @@ function Footer({ lng, ...props }) {
           <p className={classes.footerListTitle}>{t("меню")}</p>
           <ul className={classes.footerList}>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/business"} className={classes.footerLink}>
                 {t("Для бизнеса")}
               </Link>
             </li>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/business#company"} className={classes.footerLink}>
                 {t("О нас")}
               </Link>
             </li>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/articles"} className={classes.footerLink}>
                 {t("Статьи")}
               </Link>
             </li>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/contacts"} className={classes.footerLink}>
                 {t("Контакты")}
               </Link>
             </li>
@@ -174,17 +174,17 @@ function Footer({ lng, ...props }) {
           <p className={classes.footerListTitle}>{t("Каталог")}</p>
           <ul className={classes.footerList}>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/catalog/category"} className={classes.footerLink}>
                 {t("ФЭС")}
               </Link>
             </li>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/catalog/category"} className={classes.footerLink}>
                 {t("ФЭМ")}
               </Link>
             </li>
             <li className={classes.footerListItem}>
-              <Link href={"/"} className={classes.footerLink}>
+              <Link href={"/catalog/category"} className={classes.footerLink}>
                 {t("Комплектующие")}
               </Link>
             </li>
@@ -194,13 +194,13 @@ function Footer({ lng, ...props }) {
 
       <Box className={classes.footerConnect}>
         <Box className={classes.footerConnectBox}>
-          <Link
+          <a
             href={"tel: +998 94 998 94 94"}
             className={classes.footerNumber}
             target="_blank"
           >
             +998 94 998 94 94
-          </Link>
+          </a>
           <a
             href="mailto:entersolar@gmail.com"
             target="_blank"
@@ -209,9 +209,9 @@ function Footer({ lng, ...props }) {
             entersolar@gmail.com
           </a>
         </Box>
-        <Link href={"/"} className={classes.footerAddress} target="_blank">
+        <a href={"https://yandex.uz/maps/-/CDF2RZ9G"} className={classes.footerAddress} target="_blank">
           {t("Ташкентская область, г. Ханкурган, Улица Тимура, дом 14")}
-        </Link>
+        </a>
       </Box>
 
       <Box className={classes.footerSocial}>

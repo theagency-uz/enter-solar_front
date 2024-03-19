@@ -12,124 +12,112 @@ import Notificationcontext from "@/context/notification.context";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import classes from "./styles.module.css";
-// import { sendForm } from "@/services/application";
-import Image from "next/image";
+import { postApplication } from "@/services/application";
 import PhoneNumber from "./phoneNumber";
+import FormContext from "@/context/form.context";
 
 function Form({ lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
+  const { form, setForm } = useContext(FormContext);
   const { notify, setNotify } = useContext(Notificationcontext);
   const [loadng, setLoading] = useState(false);
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   const smUp = useMediaQuery((theme) => theme.breakpoints.up("sm"));
 
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [valid, setValid] = useState(true);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phone: "",
+      email: "",
+      request: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().max(255).required(t("Имя обязательное поле")),
+      phone: Yup.string().required(t("Номер обязательное поле")),
+      email: Yup.string()
+        .email(t("Введите в правильном формате"))
+        .required(t("Email обязательное поле")),
+      request: Yup.string(),
+    }),
 
-  const handleChange = (value) => {
-    setPhoneNumber(value);
-    setValid(validatePhoneNumber(value));
-  };
+    validateOnChange: ({}) => {},
 
-  const validatePhoneNumber = (phoneNumber) => {
-    const phoneNumberPattern = /^\+?[1-9]\d{1,14}$/;
+    onSubmit: async ({ name, phone, email, request }) => {
+      try {
+        setLoading(true);
 
-    return phoneNumberPattern.test(phoneNumber);
-  };
+        // const result = await postApplication({
+        //   name,
+        //   phone,
+        //   email,
+        //   request,
+        //   lng: lng,
+        //   url: window.location.href,
+        // });
 
-  // const SERVICES = ['sell', 'buy', 'price', 'moshennik'];
+        setLoading(false);
+        // if (result.error) {
+        //   return;
+        // }
 
-  // const formik = useFormik({
-  //   initialValues: {
-  //     name: '',
-  //     phone: '',
-  //     services: [],
-  //   },
-  //   validationSchema: Yup.object({
-  //     name: Yup.string().max(255).required(t('Имя обязательное поле')),
-  //     phone: Yup.string().required(t('Номер обязательное поле')),
-  //     services: Yup.array().of(Yup.string().oneOf(SERVICES)),
-  //   }),
+        // if (typeof ym === 'function') {
+        //   ym(95774498, 'reachGoal', 'form_send');
+        // }
+        // if (
+        //   typeof dataLayer !== "undefined" &&
+        //   typeof dataLayer.push === "function"
+        // ) {
+        //   dataLayer.push({ event: "form_send" });
+        // }
 
-  //   onSubmit: async ({ name, phone, services }) => {
-  //     try {
-  //       setLoading(true);
+        // if (typeof fbq === "function") {
+        //   fbq("trackCustom", "form_send");
+        // }
 
-  //       const result = await sendForm({
-  //         name,
-  //         phone,
-  //         services,
-  //       });
-
-  //       if (typeof ym === 'function') {
-  //         ym(95774498, 'reachGoal', 'form_send');
-  //       }
-  //       // if (
-  //       //   typeof dataLayer !== "undefined" &&
-  //       //   typeof dataLayer.push === "function"
-  //       // ) {
-  //       //   dataLayer.push({ event: "form_send" });
-  //       // }
-
-  //       // if (typeof fbq === "function") {
-  //       //   fbq("trackCustom", "form_send");
-  //       // }
-
-  //       setLoading(false);
-  //       setNotify({
-  //         open: true,
-  //         text: t('Спасибо, данные успешно отправлены'),
-  //       });
-  //       formik.resetForm();
-  //     } catch (err) {
-  //       console.log('form error: ', err);
-  //       setLoading(false);
-  //       setNotify({
-  //         open: false,
-  //         text: '',
-  //       });
-  //     }
-  //   },
-  // });
+        setForm({ open: false });
+        setNotify({
+          open: true,
+          text: t("Спасибо, данные успешно отправлены"),
+        });
+        formik.resetForm();
+      } catch (err) {
+        console.log("form error: ", err);
+        setLoading(false);
+        setNotify({
+          open: false,
+          text: "",
+        });
+      }
+    },
+  });
 
   return (
-    <form className={classes.form} {...props}>
+    <form className={classes.form} onSubmit={formik.handleSubmit} {...props}>
       <div className={classes.formInputBox}>
         <LabelInput
           label={t("Ваше имя")}
           name="name"
-          // placeholder={t("Ваше имя")}
-          // value={formik.values.name}
-          // onChange={formik.handleChange}
-          // onBlur={formik.handleBlur}
-          // error={Boolean(formik.touched.name && formik.errors.name)}
-          // helperText={formik.touched.name && formik.errors.name}
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          error={Boolean(formik.touched.name && formik.errors.name)}
+          helperText={formik.touched.name && formik.errors.name}
         />
         <LabelInput
           label={t("Email")}
           name="email"
-          // placeholder={t("Email")}
-          // value={formik.values.email}
-          // onChange={formik.handleChange}
-          // onBlur={formik.handleBlur}
-          // error={Boolean(formik.touched.email && formik.errors.email)}
-          // helperText={formik.touched.email && formik.errors.email}
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          error={Boolean(formik.touched.email && formik.errors.email)}
+          helperText={formik.touched.email && formik.errors.email}
         />
         <PhoneNumber
-          // label={t("Ваш телефон")}
-          phoneNumber={phoneNumber}
-          handleChange={handleChange}
-          valid={valid}
+          value={formik.values.phone}
+          formik={formik}
+          name="phone"
+          helperText={formik.touched.phone && formik.errors.phone}
         />
-        {/* <LabelInput
-          label={t('Ваш телефон')}
-          name='phone'
-          // value={formik.values.phone}
-          // onChange={formik.handleChange}
-          // onBlur={formik.handleBlur}
-          // error={Boolean(formik.touched.phone && formik.errors.phone)}
-          // helperText={formik.touched.phone && formik.errors.phone}
-        /> */}
       </div>
 
       {/* <AccordionContent lng={lng} /> */}
@@ -137,12 +125,11 @@ function Form({ lng, ...props }) {
       <Box className={classes.comment}>
         <LabelInput
           label={t("Ваш запрос")}
-          name="comment"
-          // value={formik.values.info}
-          // onChange={formik.handleChange}
-          // onBlur={formik.handleBlur}
+          name="request"
+          value={formik.values.info}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           type="textarea"
-          // placeholder={t("Комментарий (по желанию)")}
         />
       </Box>
       <Button className={classes.submit} disableRipple={true} type="submit">

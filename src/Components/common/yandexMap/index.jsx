@@ -15,19 +15,19 @@ import classes from "./styles.module.css";
 
 const markers = [
   {
-    position: { lat: 41.263219, lng: 69.328892 },
-    title: "Пивоваренный завод Erkmakon",
-    label: "Erkmakon",
-    address: "г. Ташкент, Муйнак, 96",
-    number: "+998 90 097 73 90",
+    position: { lat: 41.159776, lng: 69.017249 },
+    title: "Enter Solar",
+    label: "Enter Solar",
+    address: "улица Узбекистан, 14",
+    number: "+998 78 122-30-69",
   },
 ];
 
-export default function YandexMap({ type, lng, ...props }) {
+function YandexMap({ type, lng, ...props }) {
   const { t, i18n } = useTranslation(lng);
   const [error, setError] = useState();
   const [branch, setBranch] = useState();
-  const [center, setCenter] = useState([41.263219, 69.328892]);
+  const [center, setCenter] = useState([41.159776, 69.017249]);
   const [zoom, setZoom] = useState(18);
   const mapRef = useRef(null);
 
@@ -132,3 +132,5 @@ export default function YandexMap({ type, lng, ...props }) {
     </YMaps>
   );
 }
+
+export default YandexMap;

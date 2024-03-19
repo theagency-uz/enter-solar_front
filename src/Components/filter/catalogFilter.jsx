@@ -14,7 +14,7 @@ function CatalogFilter({ lng, Icon, ...props }) {
         <h4 className={classes.filterName}>{t("Тип")}</h4>
         <ToggleButtonGroup
           exclusive
-          // value={brand}
+          value="test"
           // onChange={async (e, newValue) => {
           //   await setBrand(newValue);
           //   setPage(1);
@@ -30,7 +30,7 @@ function CatalogFilter({ lng, Icon, ...props }) {
           }}
         >
           <ToggleButton
-            // value={b.name}
+            value="test"
             // key={b.id}
             aria-label="bold"
             disableRipple={true}
@@ -63,7 +63,7 @@ function CatalogFilter({ lng, Icon, ...props }) {
             {t("Односторонние")}
           </ToggleButton>
           <ToggleButton
-            // value={b.name}
+            value="test"
             // key={b.id}
             aria-label="bold"
             disableRipple={true}
@@ -102,7 +102,7 @@ function CatalogFilter({ lng, Icon, ...props }) {
         <h4 className={classes.filterName}>{t("Бренд")}</h4>
         <ToggleButtonGroup
           exclusive
-          // value={brand}
+          value="test"
           // onChange={async (e, newValue) => {
           //   await setBrand(newValue);
           //   setPage(1);
@@ -118,7 +118,7 @@ function CatalogFilter({ lng, Icon, ...props }) {
           }}
         >
           <ToggleButton
-            // value={b.name}
+            value="test"
             // key={b.id}
             aria-label="bold"
             disableRipple={true}
@@ -151,7 +151,7 @@ function CatalogFilter({ lng, Icon, ...props }) {
             Enter Solar
           </ToggleButton>
           <ToggleButton
-            // value={b.name}
+            value="test"
             // key={b.id}
             aria-label="bold"
             disableRipple={true}

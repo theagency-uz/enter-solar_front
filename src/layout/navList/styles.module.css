@@ -80,12 +80,12 @@
 
 @media (min-width: 1440px) {
   .navItem {
-    font-size: var(--font14);
+    font-size: var(--font16);
   }
   .categoryName {
-    font-size: var(--font14);
+    font-size: var(--font16);
   }
   .navItem button {
-    font-size: var(--font14);
+    font-size: var(--font16);
   }
 }

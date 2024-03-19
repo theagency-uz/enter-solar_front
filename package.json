@@ -19,6 +19,7 @@
     "@pbe/react-yandex-maps": "^1.2.5",
     "accept-language": "^3.0.18",
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "formik": "^2.4.5",
     "framer-motion": "^10.18.0",
     "i18next": "^23.7.18",

@@ -1,5 +1,4 @@
 import ContactsPage from "@/Components/contactsPage";
-import { Box } from "@mui/material";
 import classes from "./page.module.css";
 import { useTranslation } from "@/app/i18n";
 import BreadCrumbs from "@/Components/common/breadCrumbs";
@@ -33,18 +32,18 @@ async function Contacts({ params: { lng } }) {
   const links = [
     {
       name: "Контакты",
-      link: `/contacts`,
+      link: `/${lng}/contacts`,
       id: "contacts",
     },
   ];
 
   return (
-    <Box className={classes.contacts}>
-      <Box className={classes.catalogCrumbs}>
+    <div className={classes.contacts}>
+      <div className={classes.catalogCrumbs}>
         <BreadCrumbs links={links} lng={lng} />
-      </Box>
+      </div>
       <ContactsPage lng={lng} />
-    </Box>
+    </div>
   );
 }
 

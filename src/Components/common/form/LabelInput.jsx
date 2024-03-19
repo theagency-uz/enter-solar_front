@@ -19,20 +19,20 @@ export default function LabelInput({
       <TextField
         color="#fff"
         variant="standard"
-        // name={name}
-        // id={name}
-        // value={value}
-        // onChange={onChange}
-        // onBlur={onBlur}
-        // error={error}
-        // helperText={helperText}
+        name={name}
+        id={name}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        error={error}
+        helperText={helperText}
         fullWidth
         className={`${classes.input} ${
           type === "textarea" ? classes.textarea : ""
         }`}
         InputProps={{ disableUnderline: true }}
         placeholder={placeholder}
-        rows={2}
+        rows={1.5}
         multiline={type === "textarea"}
       />
     </label>

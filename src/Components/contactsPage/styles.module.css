@@ -150,6 +150,10 @@
   .formContentInner button {
     margin: 0;
   }
+
+  .contactsLink {
+    max-width: 270px;
+  }
 }
 
 @media (min-width: 1440px) {

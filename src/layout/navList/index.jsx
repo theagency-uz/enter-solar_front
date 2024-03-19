@@ -95,14 +95,14 @@ function NavList({ lng, setOpen, scrollFired, ...props }) {
                   zIndex: -1,
                   top: mdUp ? "54px" : "0",
                   height: "auto",
-                  width: mdUp ? "160px" : "100%",
+                  width: mdUp ? "185px" : "100%",
                   transition: { duration: 0.3 },
                 },
                 close: {
                   zIndex: -1,
                   height: "0",
                   top: mdUp ? "54px" : "0",
-                  width: mdUp ? "160px" : "100%",
+                  width: mdUp ? "185px" : "100%",
                   transition: { duration: 0.3 },
                 },
               }}

@@ -10,10 +10,16 @@
   margin-bottom: 50px;
 }
 
+@media (min-width: 600px) {
+  .productInfo {
+    padding-top: 130px;
+  }
+}
+
 @media (min-width: 992px) {
   .productInfo {
     margin-bottom: 120px;
-    padding-top: 190px;
+    padding-top: 150px;
   }
 
   .productInfoWrapper {

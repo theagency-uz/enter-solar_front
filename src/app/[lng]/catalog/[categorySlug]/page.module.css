@@ -24,9 +24,15 @@
   margin-bottom: 40px;
 }
 
+@media (min-width: 600px) {
+  .catalog {
+    padding-top: 130px;
+  }
+}
+
 @media (min-width: 992px) {
   .catalog {
-    padding-top: 170px;
+    padding-top: 150px;
     margin-bottom: 120px;
   }
   .catalogTitle {

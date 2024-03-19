@@ -1,5 +1,4 @@
 import React from "react";
-import { Box } from "@mui/material";
 import { useTranslation } from "@/app/i18n";
 import productData from "@/data/productData";
 import Container from "@/Container/Container";
@@ -32,7 +31,7 @@ async function Catalog({ params: { lng }, ...props }) {
   const links = [
     {
       name: "ФЭМ",
-      link: `category`,
+      link: `/category`,
       id: "catalog",
     },
   ];
@@ -47,19 +46,18 @@ async function Catalog({ params: { lng }, ...props }) {
 
   return (
     <Container>
-      <Box className={classes.catalog}>
-        <Box className={classes.catalogCrumbs}>
-          <BreadCrumbs links={links} lng={lng} />
-        </Box>
+      <div className={classes.catalog}>
+        <BreadCrumbs links={links} lng={lng} /> 
+
         <h3 className={classes.catalogTitle}>
           {t("Фото-электрические модули")}
         </h3>
 
-        <Box className={classes.catalogFilter}>
+        <div className={classes.catalogFilter}>
           <Filter lng={lng} />
           <CatalogProduct lng={lng} product={product} />
-        </Box>
-      </Box>
+        </div>
+      </div>
     </Container>
   );
 }

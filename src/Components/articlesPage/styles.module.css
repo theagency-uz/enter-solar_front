@@ -96,6 +96,50 @@ button.articleBtn:hover {
   background: transparent;
 }
 
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination ul > li:first-child {
+  display: none;
+}
+.pagination ul > li:last-child {
+  display: none;
+}
+
+.pagination ul {
+  gap: 30px;
+}
+.pagination ul > li > button {
+  color: #ccc;
+  font-family: "Stapel";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+.pagination ul > li > button:hover {
+  background: transparent;
+}
+
+.pagination :global(.MuiPaginationItem-root.Mui-selected) {
+  background: transparent;
+  color: #333;
+}
+
+.pagination :global(.MuiPaginationItem-root.Mui-selected:hover) {
+  background: transparent;
+  color: #333;
+}
+
+
 @media (min-width: 576px) {
   .articlesList {
     grid-template-columns: repeat(2, 1fr);
@@ -131,6 +175,10 @@ button.articleBtn:hover {
   }
 
   .articlesDate {
+    font-size: var(--font14);
+  }
+
+  .pagination ul > li > button {
     font-size: var(--font14);
   }
 }

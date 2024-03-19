@@ -26,6 +26,12 @@
 
 @media (min-width: 992px) {
   .sidebarBtn {
+    line-height: normal;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sidebarBtn {
     font-size: var(--font14);
   }
 }

@@ -4,9 +4,11 @@ import "react-phone-input-2/lib/style.css";
 
 export default function PhoneNumber({
   label,
-  phoneNumber,
-  handleChange,
+  value,
+  formik,
+  name,
   valid,
+  helperText,
   ...props
 }) {
 
@@ -16,15 +18,18 @@ export default function PhoneNumber({
         {/* <p className={classes.label}>{label}</p> */}
         <PhoneInput
           country={"uz"}
-          value={phoneNumber}
-          onChange={handleChange}
-          placeholder="+9989 (94) 999-99-99"
+          value={value}
+          onChange={(v, country, e, formattedValue) =>
+            formik.setFieldValue(name, v)
+          }
+          placeholder='+9989 (99) 999-99-99'
           inputProps={{
             required: true,
+            name: name,
           }}
         />
       </label>
-      {!valid && <p className={classes.helperText}></p>}
+      {helperText && <p className={classes.helperText}>{helperText}</p>}
     </>
   );
 }
