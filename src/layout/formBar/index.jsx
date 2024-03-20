@@ -1,5 +1,5 @@
 "use client";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 import classes from "./styles.module.css";
 import Sidebar from "../sidebar";
@@ -16,6 +16,9 @@ function FormBar({ lng, form, setForm, ...props }) {
       setOpen={(v) => setForm({ open: v })}
       isForm={true}
     >
+      <Button onClick={() => setForm({ open: false })} className={classes.closeBtn}>
+        <Image src="/icons/close-icon.svg" width={27} height={27} alt="закрыть" />
+      </Button>
       <Box className={classes.wrapper}>
         <FormWrapper lng={lng} />
 

@@ -71,7 +71,6 @@
 
 .contactImg {
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 @media (min-width: 992px) {
@@ -108,7 +107,9 @@
   .contactImgBox {
     width: 50%;
   }
-
+  .contactImg {
+    height: auto;
+  }
   .contactText {
     font-size: var(--font14);
   }

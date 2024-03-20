@@ -109,13 +109,23 @@
   line-height: 121.429%;
 }
 
+.contactsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media (min-width: 992px) {
   .contactsBox {
     flex-direction: row;
     gap: 0px;
     margin-bottom: 80px;
+    width: 90%;
   }
-
+  .contactsMain {
+    flex-direction: row;
+    gap: 100px;
+  }
   .contactsTitle {
     font-size: var(--font40);
   }
@@ -128,6 +138,7 @@
     flex-direction: row;
     gap: 50px;
     padding: 20px 30px;
+    align-items: center;
     margin-top: 80px;
   }
 

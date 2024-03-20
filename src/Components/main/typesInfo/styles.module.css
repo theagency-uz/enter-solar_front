@@ -1,19 +1,33 @@
 .typesInfo {
   padding: 50px 0px;
   margin-bottom: 50px;
-  background: url("/static/site/typeinfo-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
   width: 100%;
   height: auto;
 }
 
+.typesInfo::before {
+  content: "";
+  background: url("/static/site/typeinfo-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  filter: brightness(0.5);
+}
+
+.typesInfoMain {
+  position: relative;
+}
 .typesInfoTitle {
   color: #fff;
   font-family: "Stapel";
   font-size: 30px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 100%;
   margin-bottom: 30px;
 }
@@ -95,6 +109,9 @@ button.typesInfoBtn:hover {
 }
 
 @media (min-width: 992px) {
+  .typesInfo::before {
+    filter: brightness(1);
+  }
   .typesInfo {
     padding: 100px 0px;
     margin-bottom: 120px;

@@ -34,11 +34,7 @@ function ArticlesPage({
     <>
       <ul className={classes.articlesList}>
         {articles.slice(0, 6).map((article, index) => {
-          return (
-            <li key={article.id}>
-              <ArticleCard article={article} lng={lng} />
-            </li>
-          );
+          return <ArticleCard article={article} lng={lng} key={article.id} />;
         })}
       </ul>
       {pageCount > 0 && (

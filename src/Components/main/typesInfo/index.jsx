@@ -14,32 +14,34 @@ function TypesInfo({ lng, ...props }) {
   return (
     <Box className={classes.typesInfo}>
       <Container>
-        <h3 className={classes.typesInfoTitle}>
-          {t("Виды фото-электрических станций")}
-        </h3>
-        <Box className={classes.typesInfoWrapper}>
-          <Box className={classes.typesInfoInner}>
-            <h4 className={classes.typesInfoName}>{t("Сетевые ФЭС")}</h4>
-            <span className={classes.typesInfoLine}></span>
-            <Box className={classes.typesInfoBox}>
-              <p className={classes.typesInfoType}>{t("Экономичность")}</p>
-              <span className={classes.typesInfoAbout}>
-                {t(
-                  "Сетевые солнечные панели позволяют зарабатывать на излишках электроэнергии, отдавая их в городскую сеть."
-                )}
-              </span>
+        <Box className={classes.typesInfoMain}>
+          <h3 className={classes.typesInfoTitle}>
+            {t("Виды фото-электрических станций")}
+          </h3>
+          <Box className={classes.typesInfoWrapper}>
+            <Box className={classes.typesInfoInner}>
+              <h4 className={classes.typesInfoName}>{t("Сетевые ФЭС")}</h4>
+              <span className={classes.typesInfoLine}></span>
+              <Box className={classes.typesInfoBox}>
+                <p className={classes.typesInfoType}>{t("Экономичность")}</p>
+                <span className={classes.typesInfoAbout}>
+                  {t(
+                    "Сетевые солнечные панели позволяют зарабатывать на излишках электроэнергии, отдавая их в городскую сеть."
+                  )}
+                </span>
+              </Box>
             </Box>
-          </Box>
-          <Box className={classes.typesInfoInner}>
-            <h4 className={classes.typesInfoName}>{t("Гибридные ФЭС")}</h4>
-            <span className={classes.typesInfoLine}></span>
-            <Box className={classes.typesInfoBox}>
-              <p className={classes.typesInfoType}>{t("Автономность")}</p>
-              <span className={classes.typesInfoAbout}>
-                {t(
-                  "При установке гибридных солнечных панелей вы можете не зависеть от городской подачи электроэнергии."
-                )}
-              </span>
+            <Box className={classes.typesInfoInner}>
+              <h4 className={classes.typesInfoName}>{t("Гибридные ФЭС")}</h4>
+              <span className={classes.typesInfoLine}></span>
+              <Box className={classes.typesInfoBox}>
+                <p className={classes.typesInfoType}>{t("Автономность")}</p>
+                <span className={classes.typesInfoAbout}>
+                  {t(
+                    "При установке гибридных солнечных панелей вы можете не зависеть от городской подачи электроэнергии."
+                  )}
+                </span>
+              </Box>
             </Box>
           </Box>
         </Box>

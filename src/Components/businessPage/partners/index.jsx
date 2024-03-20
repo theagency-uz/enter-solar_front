@@ -38,6 +38,7 @@ function Partners({ lng, ...props }) {
         <video
           src={"/videos/business-page.mp4"}
           // autoPlay={true}
+          poster="/videos/poster.jpg"
           controls
           // muted
           // loop

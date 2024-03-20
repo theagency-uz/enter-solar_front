@@ -236,6 +236,7 @@ button.submit:hover {
   left: 50%;
   width: 320px;
   padding: 45px 18px 30px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

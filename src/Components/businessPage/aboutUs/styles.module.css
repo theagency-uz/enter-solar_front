@@ -85,6 +85,7 @@
   font-style: normal;
   font-weight: 300;
   line-height: 110.162%;
+  max-width: 240px;
 }
 
 @media (min-width: 576px) {
@@ -132,5 +133,6 @@
 
   .aboutText {
     font-size: var(--font14);
+    max-width: 100%;
   }
 }

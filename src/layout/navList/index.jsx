@@ -81,11 +81,20 @@ function NavList({ lng, setOpen, scrollFired, ...props }) {
         {mdUp ? (
           <AnimatePresence mode="wait">
             <motion.div
-              // style={{ background: scrollFired ? "#fff" : "transparent" }}
+              style={{
+                background: scrollFired ? "#fff" : "transparent",
+                borderRadius: "10px",
+                border: scrollFired
+                  ? categoryOpen
+                    ? "1px solid #969696"
+                    : "none"
+                  : "none",
+                padding: categoryOpen ? "5px" : "0",
+              }}
               ref={categoriesRef}
               initial={{
                 // height: "60px",
-                top: mdUp ? "54px" : "0",
+                top: mdUp ? "64px" : "0",
                 overflow: "hidden",
               }}
               animate={categoryOpen ? "open" : "close"}
@@ -93,16 +102,16 @@ function NavList({ lng, setOpen, scrollFired, ...props }) {
               variants={{
                 open: {
                   zIndex: -1,
-                  top: mdUp ? "54px" : "0",
+                  top: mdUp ? "64px" : "0",
                   height: "auto",
-                  width: mdUp ? "185px" : "100%",
+                  width: mdUp ? "195px" : "100%",
                   transition: { duration: 0.3 },
                 },
                 close: {
                   zIndex: -1,
                   height: "0",
-                  top: mdUp ? "54px" : "0",
-                  width: mdUp ? "185px" : "100%",
+                  top: mdUp ? "64px" : "0",
+                  width: mdUp ? "195px" : "100%",
                   transition: { duration: 0.3 },
                 },
               }}

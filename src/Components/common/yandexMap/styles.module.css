@@ -1,6 +1,5 @@
-.map :global(.ymaps-2-1-79-inner-panes) {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
+.map :global([class*="ground-pane"]) {
+  filter: grayscale(1);
 }
 /* .map :global(.ymaps-2-1-79-inner-panes) {
   filter: invert(100%);

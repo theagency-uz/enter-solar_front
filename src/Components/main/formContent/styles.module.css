@@ -74,6 +74,7 @@
   .formContentWrapper {
     flex-direction: row;
     gap: 50px;
+    align-items: center;
     padding: 20px 30px;
   }
 
