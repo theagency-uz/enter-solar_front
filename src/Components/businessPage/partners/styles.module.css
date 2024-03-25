@@ -22,12 +22,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px 10px;
+  gap: 30px 120px;
 }
 
 .partnersItem {
   display: flex;
-  width: calc(50% - 40px / 2);
+  width: calc(50% - 30px / 2);
   justify-content: center;
   transition: all 0.4s ease;
 }
@@ -40,8 +40,7 @@
 
 .partnersImg {
   width: 100%;
-  max-width: 60px;
-  /* height: auto; */
+  height: auto;
   object-fit: contain;
   filter: grayscale(100%);
   transition: all 0.4s ease;
@@ -58,18 +57,104 @@
   height: auto;
 }
 
-@media (min-width: 768px) {
-  .partnersItem {
-    width: calc(20% - 40px / 5);
-  }
+.clientList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  row-gap: 20px;
+}
+.clientItem {
+  display: flex;
+  transition: all 0.4s ease;
+}
+
+.clientImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  opacity: 0.3;
+}
+
+.clientItem:hover > img {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.clientSliderItem {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 35px;
+  row-gap: 10px;
+}
+
+.clientBox {
+  display: flex;
+  transition: all 0.4s ease;
+}
+
+.clientImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  opacity: 0.3;
+}
+
+.clientBox:hover > img {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.mySwiper::part(pagination) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.mySwiper::part(bullet) {
+  display: block;
+  cursor: pointer;
+  background: #7D7D7D;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.mySwiper::part(bullet-active) {
+  display: block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  opacity: 1;
 }
 
 @media (min-width: 992px) {
   .partners {
     margin-bottom: 120px;
   }
+
+  .partnersItem {
+    width: calc(10% - 30px / 5);
+  }
+  
   .videoBox {
     margin: 0 -40px;
   }
   
+}
+
+@media (min-width: 1200px) {
+  .partnersItem {
+    width: calc(12% - 30px / 5);
+  }
 }
