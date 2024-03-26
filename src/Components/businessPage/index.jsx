@@ -10,6 +10,7 @@ import Partners from "./partners";
 import AboutUs from "./aboutUs";
 import AboutCompany from "./aboutCompany";
 import Work from "./work";
+import ProjectsContent from "../common/projectsContent";
 
 function BusinessPage({ lng, ...props }) {
   const { t } = useTranslation(lng);
@@ -20,12 +21,16 @@ function BusinessPage({ lng, ...props }) {
       <AboutUs lng={lng} />
       <Work lng={lng} />
       <Partners lng={lng} />
+
+      <Box className={classes.projectInner}>
+        <ProjectsContent lng={lng} />
+      </Box>
       <Box className={classes.formContentWrapper}>
         <FormWrapper lng={lng} />
 
         <Box className={classes.formContentImgBox}>
           <Image
-            src={"/static/site/form.png"}
+            src={"/static/site/business-form.png"}
             width={560}
             height={417}
             alt={"image"}

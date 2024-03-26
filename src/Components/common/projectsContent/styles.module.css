@@ -1,0 +1,252 @@
+.project {
+  padding: 60px 0;
+  background: #2a2a2a;
+  margin-bottom: 60px;
+}
+
+.projectTitle {
+  color: #8d8d8d;
+  font-family: "Stapel";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130.612%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.projectItem {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #494949;
+}
+
+.projectName {
+  color: #f2f2f2;
+  font-family: "Stapel";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160.847%;
+  padding: 6px 15px;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectItemNumber {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.projectImgBox {
+  display: flex;
+  border: 1px solid #494949;
+}
+
+.projectBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 11px;
+  border: 1px solid #494949;
+  padding: 20px;
+}
+
+.projectYear {
+  color: #a4a4a4;
+  text-align: right;
+  font-family: "Stapel";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160.847%;
+}
+
+.projectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.projectText {
+  color: #a4a4a4;
+  font-family: "Stapel";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: #494949;
+}
+
+.projectCount {
+  color: #fff;
+  font-family: "Stapel";
+  font-size: var(--font38);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115.789%;
+}
+
+.viewerBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+}
+
+.viewerMain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewerSwiper::part(button-prev),
+.viewerSwiper::part(button-next) {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  color: #fff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewerSwiper::part(button-prev) {
+  background: rgba(85, 85, 85, 0.5);
+  backdrop-filter: blur(40px);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  left: 0;
+}
+.viewerSwiper::part(button-next) {
+  background: rgba(85, 85, 85, 0.5);
+  backdrop-filter: blur(40px);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  right: 0;
+}
+.viewerSwiper {
+  width: 100%;
+  height: 80%;
+}
+
+.viewerSwiper_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+button.closeBtn {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .projectList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .projectItemNumber {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projectWrapper {
+    text-align: left;
+  }
+  .projectText {
+    white-space: pre-line;
+  }
+  .projectCount {
+    font-size: 22px;
+  }
+
+  .viewerSwiper {
+    width: 100%;
+    height: 100%;
+  }
+  .viewerSwiper::part(button-prev) {
+    background: none;
+    backdrop-filter: blur(0px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .viewerSwiper::part(button-next) {
+    background: none;
+    backdrop-filter: blur(0px);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .viewerBox {
+    padding: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .project {
+    padding: 140px 0 110px;
+    margin-bottom: 120px;
+  }
+  .projectList {
+    gap: 40px;
+  }
+
+  .projectCount {
+    font-size: var(--font35);
+  }
+}
+
+@media (min-width: 1440px) {
+  .projectTitle {
+    font-size: var(--font14);
+  }
+
+  .projectName {
+    font-size: var(--font12);
+  }
+
+  .projectYear {
+    font-size: var(--font12);
+  }
+  .projectText {
+    font-size: var(--font12);
+  }
+
+  .projectCount {
+    font-size: var(--font40);
+  }
+}

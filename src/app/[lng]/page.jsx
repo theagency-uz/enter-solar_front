@@ -10,6 +10,7 @@ import Info from "@/Components/main/info";
 import Panels from "@/Components/main/panels";
 import TypesInfo from "@/Components/main/typesInfo";
 import { useTranslation } from "../i18n";
+import Projects from "@/Components/main/projects";
 
 async function Home({ params: { lng }, ...props }) {
   const { t } = await useTranslation(lng);
@@ -38,10 +39,11 @@ async function Home({ params: { lng }, ...props }) {
       <Advantages lng={lng} />
       <Faq lng={lng} />
       <Contact lng={lng} />
+      <Projects lng={lng} />
       <Business lng={lng} />
       <Articles lng={lng} />
       <FormContent lng={lng} />
     </main>
   );
 }
-export default Home
+export default Home;

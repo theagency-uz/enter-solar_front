@@ -32,12 +32,6 @@
   transition: all 0.4s ease;
 }
 
-.partnersItem:hover img {
-  filter: grayscale(0);
-  opacity: 1;
-  transition: all 0.4s ease;
-}
-
 .partnersImg {
   width: 100%;
   height: auto;
@@ -45,6 +39,12 @@
   filter: grayscale(100%);
   transition: all 0.4s ease;
   opacity: 0.4;
+}
+
+.partnersItem:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+  transition: all 0.4s ease;
 }
 
 .videoBox {
@@ -72,15 +72,6 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: grayscale(100%);
-  transition: all 0.4s ease;
-  opacity: 0.3;
-}
-
-.clientItem:hover > img {
-  filter: grayscale(0);
-  opacity: 1;
-  transition: all 0.4s ease;
 }
 
 .clientSliderItem {
@@ -92,21 +83,6 @@
 
 .clientBox {
   display: flex;
-  transition: all 0.4s ease;
-}
-
-.clientImg {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: all 0.4s ease;
-  opacity: 0.3;
-}
-
-.clientBox:hover > img {
-  filter: grayscale(0);
-  opacity: 1;
   transition: all 0.4s ease;
 }
 
