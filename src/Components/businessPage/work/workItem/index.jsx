@@ -20,6 +20,7 @@ function WorkItem({ item, expanded, handleChange, index, lng }) {
       sx={{
         marginBottom:
           expanded === `panel${index}` ? (mdUp ? "0px" : "30px") : "0px",
+        gap: expanded === `panel${index}` ? (mdUp ? "0px" : "30px") : "20px",
       }}
     >
       <Accordion
@@ -35,7 +36,7 @@ function WorkItem({ item, expanded, handleChange, index, lng }) {
           boxShadow: "none",
           padding: "0",
           paddingBottom: mdUp ? "20px" : "0",
-          width: mdUp ? "30%" : "100%",
+          width: "100%",
           backgroundColor: "transparent",
           "&::before": {
             display: "none",
@@ -93,28 +94,30 @@ function WorkItem({ item, expanded, handleChange, index, lng }) {
         </Box>
       </Accordion>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={expanded}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 1 }}
-          transition={{ duration: 0.2 }}
-          style={{ width: mdUp ? "80%" : "100%" }}
-        >
-          {expanded === `panel${index}` && (
-            <Box className={classes.imgBox}>
-              <Image
-                src={item.image}
-                width={763}
-                height={462}
-                alt={"work-image"}
-                className={classes.workImg}
-              />
-            </Box>
-          )}
-        </motion.div>
-      </AnimatePresence>
+      {!mdUp && (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={expanded}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            style={{ width: "100%" }}
+          >
+            {expanded === `panel${index}` && (
+              <Box className={classes.imgBox}>
+                <Image
+                  src={item.image}
+                  width={763}
+                  height={462}
+                  alt={"work-image"}
+                  className={classes.workImg}
+                />
+              </Box>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      )}
     </Box>
   );
 }

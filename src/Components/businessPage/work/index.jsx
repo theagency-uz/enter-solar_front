@@ -16,9 +16,7 @@ function Work({ lng, ...props }) {
         <span className={classes.border}></span>
       </Box>
 
-      <Box>
-        <WorkAccordion lng={lng} />
-      </Box>
+      <WorkAccordion lng={lng} />
     </Box>
   );
 }

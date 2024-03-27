@@ -78,7 +78,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 35px;
-  row-gap: 10px;
+  row-gap: 30px;
 }
 
 .clientBox {
@@ -97,7 +97,7 @@
 .mySwiper::part(bullet) {
   display: block;
   cursor: pointer;
-  background: #7D7D7D;
+  background: #d9d9d9;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -109,7 +109,7 @@
   width: 10px;
   height: 10px;
   cursor: pointer;
-  background: rgb(0, 0, 0);
+  background: #9a9a9a;
   border-radius: 50%;
   opacity: 1;
 }
@@ -122,11 +122,10 @@
   .partnersItem {
     width: calc(10% - 30px / 5);
   }
-  
+
   .videoBox {
     margin: 0 -40px;
   }
-  
 }
 
 @media (min-width: 1200px) {

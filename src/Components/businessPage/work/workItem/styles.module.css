@@ -44,10 +44,6 @@
 }
 
 @media (min-width: 992px) {
-  .accordionBox {
-    flex-direction: row;
-    gap: 40px;
-  }
   .workImg {
     aspect-ratio: 7 /4;
   }

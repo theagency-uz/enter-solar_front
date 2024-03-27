@@ -5,7 +5,6 @@
   margin-bottom: 70px;
 }
 
-
 .workWrapper {
   display: flex;
   flex-direction: column;
@@ -19,9 +18,30 @@
   background: #d0d0d0;
 }
 
+.imgBox {
+  display: flex;
+  width: 100%;
+}
+
+.workImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (min-width: 992px) {
   .work {
     gap: 50px;
     margin-bottom: 100px;
+  }
+
+  .accordionWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .accordionContent {
+    width: 40%;
   }
 }

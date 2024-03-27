@@ -14,7 +14,7 @@ const clientLogo = [
       "/images/partners/bank.svg",
     ],
   },
-    {
+  {
     images: [
       "/images/partners/legend.svg",
       "/images/partners/humo.svg",
@@ -50,8 +50,7 @@ function PartnerSlider({ ...props }) {
   useEffect(() => {
     register();
 
-
-   /** @type {import('swiper/types').SwiperOptions} */
+    /** @type {import('swiper/types').SwiperOptions} */
     const params = {
       modules: [Pagination],
       slidesPerView: 2,
@@ -61,7 +60,7 @@ function PartnerSlider({ ...props }) {
       injectStyles: [
         `
         .swiper-pagination-bullet {
-          background: #7D7D7D;
+          background: #D9D9D9;
           width: 8px;
           height: 8px;
           border-radius: 50%;
@@ -69,7 +68,7 @@ function PartnerSlider({ ...props }) {
         }
 
         .swiper-pagination-bullet-active {
-          background: #000;
+          background: #9a9a9a;
           width: 8px;
           height: 8px;
           border-radius: 50%;
